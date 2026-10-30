@@ -2,245 +2,564 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090a0f">
-  <meta name="description" content="K&D Studio — independent developers building AI, operating systems, apps, games, and modern web experiences.">
-  <title>K&D Studio — Independent Developers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+
+  <meta name="description"
+        content="K&D Studio — independent developers building AI tools, software, operating systems, and games.">
+
+  <title>K&D Studio — Independent minds. Remarkable things.</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script defer src="script.js"></script>
 </head>
+
 <body>
-  <div class="noise" aria-hidden="true"></div>
   <div class="scroll-progress" id="scrollProgress"></div>
 
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="K and D Studio home">
+    <a class="brand" href="#home">
       <span class="brand-mark">K<span>&</span>D</span>
-      <span class="brand-name">STUDIO<span class="brand-dot">.</span></span>
+      <span class="brand-caption">INDEPENDENT DIGITAL STUDIO</span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span>
+    <button class="menu-toggle"
+            id="menuToggle"
+            aria-expanded="false"
+            aria-controls="navLinks"
+            aria-label="Open navigation">
+      <span></span>
+      <span></span>
     </button>
 
     <nav class="nav-links" id="navLinks">
-      <a href="#work">Work</a>
-      <a href="#developers">Developers</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#contact" class="nav-cta">Let's talk <span>↗</span></a>
+      <a href="#work">Selected work</a>
+      <a href="#people">The people</a>
+      <a href="#about">Approach</a>
+      <a class="nav-contact" href="#contact">Let's talk <span>↗</span></a>
     </nav>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero section-wrap" id="home">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> INDEPENDENT DEVELOPER COLLECTIVE</div>
-        <h1>We build things<br>that <span class="gradient-text">mean something.</span></h1>
-        <p class="hero-description">
-          From AI experiments and modern web apps to operating systems and games —
-          we turn ambitious ideas into real projects.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore our work <span>↘</span></a>
-          <a class="button button-ghost" href="#developers">Meet the developers</a>
+      <div class="hero-meta">
+        <span class="eyebrow">
+          <i class="status-dot"></i>
+          TWO DEVELOPERS · MANY DIRECTIONS
+        </span>
+        <span class="hero-index">EST. IN CURIOSITY / 01—26</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="overline">A SMALL STUDIO WITH BIG CURIOSITY</p>
+
+          <h1>
+            Independent minds.<br>
+            <em>Remarkable things.</em>
+          </h1>
+
+          <p class="hero-description">
+            We build software with purpose — from useful AI tools and thoughtful
+            interfaces to operating systems and worlds worth getting lost in.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">
+              Explore our work <span>↘</span>
+            </a>
+
+            <a class="text-link" href="#people">
+              Meet the developers <span>↗</span>
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <span class="note-line"></span>
+            <span>Curiosity first. Craft always.</span>
+          </div>
         </div>
-        <div class="hero-meta">
-          <div><strong>02</strong><span>Developers</span></div>
-          <div><strong>∞</strong><span>Ideas to build</span></div>
-          <div><strong>100%</strong><span>Independent</span></div>
+
+        <div class="hero-art">
+          <div class="art-top">
+            <span>STUDIO NOTES</span>
+            <span>NO. 001</span>
+          </div>
+
+          <div class="art-center">
+            <div class="art-sun"></div>
+            <div class="art-arch"></div>
+            <div class="art-circle"></div>
+            <span class="art-letter">K<span>&</span>D</span>
+          </div>
+
+          <div class="art-bottom">
+            <span>IDEAS INTO INTERFACES</span>
+            <span>INDIA</span>
+          </div>
         </div>
       </div>
 
-      <div class="hero-art" aria-label="Abstract animated 3D-inspired graphic">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="orbit orbit-three"></div>
-        <div class="core">
-          <div class="core-inner">K<span>&</span>D</div>
-        </div>
-        <div class="floating-tag tag-ai"><span class="tag-icon">✳</span> AI / ML</div>
-        <div class="floating-tag tag-os"><span class="tag-icon">⌘</span> SYSTEMS</div>
-        <div class="floating-tag tag-web"><span class="tag-icon">⌁</span> WEB / APP</div>
-        <div class="art-caption"><span class="status-dot"></span> CREATING WHAT'S NEXT</div>
+      <div class="hero-footer">
+        <span>DESIGN-LED DEVELOPMENT</span>
+        <span>AI · SYSTEMS · SOFTWARE · GAMES</span>
+        <a href="#work">SCROLL TO DISCOVER ↓</a>
       </div>
-
-      <a href="#work" class="scroll-cue"><span></span> SCROLL TO EXPLORE</a>
     </section>
 
-    <section class="section-wrap section-block" id="work">
-      <div class="section-heading reveal">
+    <!-- INTRO -->
+    <section class="intro-strip">
+      <div class="section-wrap strip-inner">
+        <span class="strip-label">WHAT WE DO</span>
+
+        <p>
+          We like solving hard problems, making complicated things feel simple,
+          and building ideas that are actually useful.
+        </p>
+
+        <span class="strip-number">01 / 04</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="work-section section-wrap section-space" id="work">
+      <div class="section-heading">
         <div>
-          <div class="eyebrow">01 / SELECTED PROJECTS</div>
-          <h2>Ideas in <span class="gradient-text">motion.</span></h2>
+          <p class="overline">A FEW THINGS WE'RE MAKING</p>
+          <h2>Selected <em>work.</em></h2>
         </div>
-        <p>A selection of experiments, tools, and projects built by our team.</p>
+
+        <p class="section-side-copy">
+          A growing collection of experiments, products, and ambitious side projects.
+        </p>
       </div>
 
       <div class="project-grid">
-        <a class="project-card project-featured reveal" href="https://github.com/Krishu04rajput/HIVAI" target="_blank" rel="noopener noreferrer">
+
+        <!-- HIVAI -->
+        <a class="project-card"
+           href="https://github.com/Krishu04rajput/HIVAI"
+           target="_blank"
+           rel="noopener noreferrer">
+
           <div class="project-visual visual-hivai">
-            <div class="hivai-ring ring-a"></div>
-            <div class="hivai-ring ring-b"></div>
-            <div class="hivai-ring ring-c"></div>
-            <div class="hivai-core">H<span>V</span></div>
-            <span class="visual-label">PERSONAL AI SYSTEM</span>
+            <div class="visual-window">
+              <div class="window-top">
+                <span>● ● ●</span>
+                <span>HIVAI / WORKSPACE</span>
+                <span>↗</span>
+              </div>
+
+              <div class="hivai-content">
+                <span class="visual-kicker">PERSONAL AI SYSTEM</span>
+                <strong>Make room<br>for better ideas.</strong>
+
+                <div class="visual-input">
+                  Ask HIVAI anything <span>↗</span>
+                </div>
+              </div>
+            </div>
+
+            <span class="visual-number">PROJECT 001</span>
           </div>
+
           <div class="project-info">
-            <div><span class="project-type">AI / MACHINE LEARNING</span><h3>HIVAI</h3></div>
+            <div>
+              <span class="project-type">AI · PERSONAL SOFTWARE</span>
+              <h3>HIVAI</h3>
+              <p>A personal AI system built to make everyday work feel more natural.</p>
+            </div>
+
             <span class="project-arrow">↗</span>
           </div>
-          <p>A personal AI system exploring intelligent assistance, local models, and a futuristic interface.</p>
-          <div class="tag-list"><span>Python</span><span>LLMs</span><span>AI</span></div>
         </a>
 
-        <a class="project-card reveal" href="https://github.com/Krishu04rajput/Synapse" target="_blank" rel="noopener noreferrer">
+        <!-- SYNAPSE -->
+        <a class="project-card"
+           href="https://github.com/Krishu04rajput/Synapse"
+           target="_blank"
+           rel="noopener noreferrer">
+
           <div class="project-visual visual-synapse">
-            <div class="synapse-node node-1"></div><div class="synapse-node node-2"></div>
-            <div class="synapse-node node-3"></div><div class="synapse-node node-4"></div>
-            <div class="synapse-line line-1"></div><div class="synapse-line line-2"></div>
-            <div class="synapse-line line-3"></div><div class="synapse-line line-4"></div>
-            <span class="visual-label">CONNECTED COMMUNICATION</span>
-          </div>
-          <div class="project-info"><div><span class="project-type">SOFTWARE / COMMUNICATION</span><h3>Synapse</h3></div><span class="project-arrow">↗</span></div>
-          <p>A communication-focused software project built around connected digital experiences.</p>
-          <div class="tag-list"><span>App Development</span><span>UI / UX</span></div>
-        </a>
+            <div class="synapse-sheet">
+              <span class="sheet-label">SYNAPSE / SPACE</span>
 
-        <a class="project-card reveal" href="https://github.com/Krishu04rajput/VoxelCraft" target="_blank" rel="noopener noreferrer">
-          <div class="project-visual visual-voxel">
-            <div class="voxel voxel-1"></div><div class="voxel voxel-2"></div>
-            <div class="voxel voxel-3"></div><div class="voxel voxel-4"></div>
-            <div class="voxel voxel-5"></div><div class="voxel voxel-6"></div>
-            <span class="visual-label">BUILD YOUR OWN WORLD</span>
-          </div>
-          <div class="project-info"><div><span class="project-type">GAME DEVELOPMENT</span><h3>VoxelCraft</h3></div><span class="project-arrow">↗</span></div>
-          <p>A voxel-inspired game project exploring interactive worlds and game mechanics.</p>
-          <div class="tag-list"><span>Game Dev</span><span>3D</span><span>Voxel</span></div>
-        </a>
+              <div class="sheet-avatar-row">
+                <b>K</b>
+                <b>D</b>
+                <b>+</b>
+              </div>
 
-        <a class="project-card project-iceberg reveal" href="https://github.com/dy2097441-coder/iceberg-OS" target="_blank" rel="noopener noreferrer">
-          <div class="project-visual visual-iceberg">
-            <div class="iceberg-grid"></div>
-            <div class="iceberg-shape"><span></span><i></i></div>
-            <div class="iceberg-scan"></div>
-            <span class="visual-label">LOW-LEVEL SYSTEMS</span>
-          </div>
-          <div class="project-info"><div><span class="project-type">KERNEL / OPERATING SYSTEM</span><h3>Iceberg OS</h3></div><span class="project-arrow">↗</span></div>
-          <p>An operating-system project focused on the foundations of system software and OS development.</p>
-          <div class="tag-list"><span>Operating Systems</span><span>Kernel Dev</span><span>Systems</span></div>
-        </a>
+              <div class="sheet-lines">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
 
-        <a class="project-card reveal" href="https://github.com/Krishu04rajput/CommunicationX" target="_blank" rel="noopener noreferrer">
-          <div class="project-visual visual-communication">
-            <div class="comm-window">
-              <div class="comm-top"><i></i><i></i><i></i></div>
-              <div class="comm-message msg-one"></div>
-              <div class="comm-message msg-two"></div>
-              <div class="comm-message msg-three"></div>
+              <div class="sheet-footer">
+                A little closer, wherever you are.
+              </div>
             </div>
-            <span class="visual-label">COMMUNICATION SOFTWARE</span>
+
+            <span class="visual-number">PROJECT 002</span>
           </div>
-          <div class="project-info"><div><span class="project-type">APP DEVELOPMENT</span><h3>CommunicationX</h3></div><span class="project-arrow">↗</span></div>
-          <p>A software project exploring messaging experiences and desktop application workflows.</p>
-          <div class="tag-list"><span>Software</span><span>Communication</span></div>
+
+          <div class="project-info">
+            <div>
+              <span class="project-type">COMMUNICATION · PRODUCT</span>
+              <h3>Synapse</h3>
+              <p>A communication space designed around people, not noise.</p>
+            </div>
+
+            <span class="project-arrow">↗</span>
+          </div>
         </a>
 
-        <a class="project-card reveal" href="https://github.com/Krishu04rajput/AI-Forge" target="_blank" rel="noopener noreferrer">
+        <!-- VOXELCRAFT -->
+        <a class="project-card"
+           href="https://github.com/Krishu04rajput/VoxelCraft"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <div class="project-visual visual-voxel">
+            <div class="voxel-land">
+              <span class="voxel-sun"></span>
+              <span class="voxel-cube cube-one"></span>
+              <span class="voxel-cube cube-two"></span>
+              <span class="voxel-cube cube-three"></span>
+            </div>
+
+            <span class="visual-number">PROJECT 003</span>
+            <span class="visual-caption">BUILD YOUR OWN WORLD.</span>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <span class="project-type">GAME DEVELOPMENT</span>
+              <h3>VoxelCraft</h3>
+              <p>A block-built world for exploring, creating, and experimenting.</p>
+            </div>
+
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- COMMUNICATIONX -->
+        <a class="project-card"
+           href="https://github.com/Krishu04rajput/CommunicationX"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <div class="project-visual visual-comms">
+            <div class="comms-card">
+              <span class="comms-status"></span>
+              <span class="comms-label">COMMUNICATIONX</span>
+
+              <strong>Good conversations<br>start here.</strong>
+
+              <div class="comms-bars">
+                <i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+
+            <span class="visual-number">PROJECT 004</span>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <span class="project-type">DESKTOP APP · COMMUNICATION</span>
+              <h3>CommunicationX</h3>
+              <p>A focused messaging and calling experience in progress.</p>
+            </div>
+
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- AI-FORGE -->
+        <a class="project-card"
+           href="https://github.com/Krishu04rajput/AI-Forge"
+           target="_blank"
+           rel="noopener noreferrer">
+
           <div class="project-visual visual-forge">
-            <div class="forge-sun"></div><div class="forge-beam beam-one"></div><div class="forge-beam beam-two"></div>
-            <span class="visual-label">LEARN. BUILD. REPEAT.</span>
+            <div class="forge-paper">
+              <span>AI / FORGE</span>
+
+              <div class="forge-big">
+                Learn by<br><em>building.</em>
+              </div>
+
+              <div class="forge-rule"></div>
+
+              <div class="forge-bottom">
+                A practical place for curious minds.
+              </div>
+            </div>
+
+            <span class="visual-number">PROJECT 005</span>
           </div>
-          <div class="project-info"><div><span class="project-type">EDTECH / WEB</span><h3>AI-Forge</h3></div><span class="project-arrow">↗</span></div>
-          <p>A learning-platform concept focused on making technology and AI easier to explore.</p>
-          <div class="tag-list"><span>Web</span><span>Education</span><span>AI</span></div>
+
+          <div class="project-info">
+            <div>
+              <span class="project-type">EDUCATION · AI</span>
+              <h3>AI-Forge</h3>
+              <p>A learning platform concept for understanding AI through practice.</p>
+            </div>
+
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- ICEBERG OS -->
+        <a class="project-card"
+           href="https://github.com/dy2097441-coder/iceberg-OS"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <div class="project-visual visual-iceberg">
+            <div class="os-window">
+              <div class="os-sidebar">
+                <b>i.</b>
+                <i></i><i></i><i></i>
+              </div>
+
+              <div class="os-main">
+                <span>ICEBERG OS</span>
+                <strong>Everything<br>in its place.</strong>
+
+                <div class="os-mini-row">
+                  <i></i><i></i><i></i>
+                </div>
+              </div>
+            </div>
+
+            <span class="visual-number">PROJECT 006</span>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <span class="project-type">OPERATING SYSTEMS</span>
+              <h3>Iceberg OS</h3>
+              <p>An operating-system project exploring the foundations beneath the interface.</p>
+            </div>
+
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- UNREAL ENGINE 5: YOUR GOOGLE DRIVE PROJECT -->
+        <a class="project-card"
+           href="https://drive.google.com/file/d/1TKaeuhDU46w6Tw8UpyJwLDJPNHxNj3Aw/view?usp=drivesdk"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <div class="project-visual visual-unreal">
+            <div class="unreal-scene">
+              <span class="unreal-label">UNREAL ENGINE 5</span>
+
+              <div class="unreal-monogram">UE<span>5</span></div>
+
+              <span class="unreal-caption">
+                REAL-TIME 3D · APP PROJECT
+              </span>
+            </div>
+
+            <span class="visual-number">PROJECT 007</span>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <span class="project-type">UNREAL ENGINE 5 · APP</span>
+              <h3>UE5 App Project</h3>
+              <p>
+                An Unreal Engine 5 app project. Open the shared Drive file
+                to explore the project.
+              </p>
+            </div>
+
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="work-foot">
+        <span>MORE IDEAS ARE ALWAYS IN PROGRESS.</span>
+
+        <a href="https://github.com/Krishu04rajput"
+           target="_blank"
+           rel="noopener noreferrer">
+          Browse Krishu's GitHub ↗
         </a>
       </div>
+    </section>
 
-      <div class="github-note reveal">
-        <span class="github-note-icon">⌘</span>
-        <div><strong>Want to see more?</strong><p>Explore our GitHub profiles for source code, experiments, and the latest updates.</p></div>
-        <a href="https://github.com/Krishu04rajput" target="_blank" rel="noopener noreferrer">Krishu's GitHub ↗</a>
-        <a href="https://github.com/dy2097441-coder" target="_blank" rel="noopener noreferrer">Divyansh's GitHub ↗</a>
+    <!-- DEVELOPERS -->
+    <section class="people-section" id="people">
+      <div class="section-wrap section-space">
+        <div class="section-heading">
+          <div>
+            <p class="overline">THE PEOPLE BEHIND THE PIXELS</p>
+            <h2>Two minds.<br><em>Different strengths.</em></h2>
+          </div>
+
+          <p class="section-side-copy">
+            Different areas of focus, one shared habit: figuring out how
+            things work — then making them better.
+          </p>
+        </div>
+
+        <div class="people-grid">
+          <article class="person-card">
+            <div class="person-top">
+              <span class="person-index">01 / DEVELOPER</span>
+              <span class="person-symbol">K.</span>
+            </div>
+
+            <div class="person-bottom">
+              <div>
+                <h3>Krishu</h3>
+                <p class="person-role">Software · AI · Game development</p>
+
+                <p class="person-bio">
+                  Interested in building useful products, exploring AI,
+                  designing interfaces, and bringing game worlds to life.
+                </p>
+              </div>
+
+              <a class="person-link"
+                 href="https://github.com/Krishu04rajput"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Krishu on GitHub">↗</a>
+            </div>
+
+            <div class="skill-list">
+              <span>PYTHON</span>
+              <span>WEB</span>
+              <span>AI</span>
+              <span>GAME DEV</span>
+              <span>LINUX</span>
+            </div>
+          </article>
+
+          <article class="person-card person-card-alt">
+            <div class="person-top">
+              <span class="person-index">02 / DEVELOPER</span>
+              <span class="person-symbol">D.</span>
+            </div>
+
+            <div class="person-bottom">
+              <div>
+                <h3>Divyansh</h3>
+                <p class="person-role">Kernel development · Operating systems</p>
+
+                <p class="person-bio">
+                  Focused on the lower layers of computing — kernels,
+                  system architecture, and the mechanics that make an OS work.
+                </p>
+              </div>
+
+              <a class="person-link"
+                 href="https://github.com/dy2097441-coder"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Divyansh on GitHub">↗</a>
+            </div>
+
+            <div class="skill-list">
+              <span>KERNELS</span>
+              <span>OS DEV</span>
+              <span>SYSTEMS</span>
+              <span>LOW-LEVEL</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section-wrap section-block developers-section" id="developers">
-      <div class="section-heading reveal">
-        <div><div class="eyebrow">02 / THE PEOPLE BEHIND IT</div><h2>Small team.<br><span class="gradient-text">Big ambition.</span></h2></div>
-        <p>Two independent developers with different strengths and one shared goal: keep building.</p>
+    <!-- APPROACH -->
+    <section class="approach-section section-wrap section-space" id="about">
+      <div class="approach-left">
+        <p class="overline">HOW WE LIKE TO WORK</p>
+        <h2>Thoughtful by<br>design. <em>Curious</em><br>by nature.</h2>
       </div>
 
-      <div class="developer-grid">
-        <article class="developer-card reveal">
-          <div class="developer-top">
-            <div class="avatar avatar-krishu"><span>K<span>.</span></span><div class="avatar-orbit"></div></div>
-            <div class="developer-status"><span class="status-dot"></span> BUILDER / CREATOR</div>
+      <div class="approach-right">
+        <div class="approach-item">
+          <span>01</span>
+          <div>
+            <h3>Make it useful</h3>
+            <p>
+              A project should solve a real problem, teach us something,
+              or make an experience better.
+            </p>
           </div>
-          <div class="developer-name-row"><div><span class="developer-label">01 — FULL-STACK EXPLORER</span><h3>Krishu</h3></div><span class="experience">04 <small>YEARS</small></span></div>
-          <p class="developer-bio">An independent developer exploring AI, web experiences, apps, Linux, and game development. Interested in turning ambitious ideas into useful, working software.</p>
-          <div class="developer-skills"><span>Python</span><span>HTML / CSS / JS</span><span>AI / LLMs</span><span>App Dev</span><span>Linux / OS</span><span>Unreal Engine</span></div>
-          <div class="developer-links">
-            <a href="https://github.com/Krishu04rajput" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
-            <a href="https://github.com/Krishu04rajput?tab=repositories" target="_blank" rel="noopener noreferrer">Repositories <span>↗</span></a>
-          </div>
-        </article>
+        </div>
 
-        <article class="developer-card developer-card-purple reveal">
-          <div class="developer-top">
-            <div class="avatar avatar-divyansh"><span>D<span>.</span></span><div class="avatar-orbit"></div></div>
-            <div class="developer-status"><span class="status-dot purple-dot"></span> KERNEL / OS DEVELOPER</div>
+        <div class="approach-item">
+          <span>02</span>
+          <div>
+            <h3>Care about the details</h3>
+            <p>
+              Good structure, clear writing, and considered design matter
+              just as much as features.
+            </p>
           </div>
-          <div class="developer-name-row"><div><span class="developer-label">02 — SYSTEMS ENGINEER</span><h3>Divyansh</h3></div><span class="experience">5+ <small>YEARS</small></span></div>
-          <p class="developer-bio">Focused exclusively on low-level systems engineering, kernel development, and operating-system architecture — working on the foundations that make an OS function.</p>
-          <div class="developer-skills"><span>Kernel Development</span><span>Operating Systems</span><span>OS Architecture</span><span>Low-Level Systems</span></div>
-          <div class="developer-links">
-            <a href="https://github.com/dy2097441-coder" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
-            <a href="https://github.com/dy2097441-coder/iceberg-OS" target="_blank" rel="noopener noreferrer">Iceberg OS <span>↗</span></a>
-          </div>
-        </article>
-      </div>
-    </section>
+        </div>
 
-    <section class="section-wrap section-block expertise-section" id="expertise">
-      <div class="section-heading reveal">
-        <div><div class="eyebrow">03 / WHAT WE DO</div><h2>Different skills.<br><span class="gradient-text">Shared curiosity.</span></h2></div>
-      </div>
-      <div class="expertise-grid">
-        <article class="expertise-item reveal"><span class="expertise-number">01</span><div class="expertise-icon">⌘</div><h3>Web & Interfaces</h3><p>Responsive websites, interactive interfaces, and digital experiences with attention to usability and detail.</p><div class="expertise-line"></div></article>
-        <article class="expertise-item reveal"><span class="expertise-number">02</span><div class="expertise-icon">✳</div><h3>AI & Python</h3><p>AI experiments, local language models, automation, and Python-based development.</p><div class="expertise-line"></div></article>
-        <article class="expertise-item reveal"><span class="expertise-number">03</span><div class="expertise-icon">⌬</div><h3>Kernel & OS Development</h3><p>Low-level system software, kernel concepts, operating-system architecture, and systems engineering.</p><div class="expertise-line"></div></article>
-        <article class="expertise-item reveal"><span class="expertise-number">04</span><div class="expertise-icon">◈</div><h3>Apps & Games</h3><p>Desktop software, application concepts, interactive prototypes, and 3D game development.</p><div class="expertise-line"></div></article>
+        <div class="approach-item">
+          <span>03</span>
+          <div>
+            <h3>Keep learning in public</h3>
+            <p>
+              We experiment, share our progress, and improve by building
+              things that challenge us.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="contact-section" id="contact">
-      <div class="section-wrap contact-inner reveal">
-        <div class="eyebrow"><span class="status-dot"></span> 04 / START A CONVERSATION</div>
-        <h2>Have an idea?<br><span class="gradient-text">Let's build it.</span></h2>
-        <p>Have a project, collaboration idea, or just want to talk tech? Send us a message.</p>
-        <form class="contact-form" id="contactForm" action="/api/contact" method="POST">
-          <div class="form-row">
-            <label>Your name<input type="text" name="name" placeholder="What should we call you?" required maxlength="100"></label>
-            <label>Your email<input type="email" name="email" placeholder="you@example.com" required maxlength="200"></label>
-          </div>
-          <label>What's on your mind?<textarea name="message" placeholder="Tell us a little about your idea..." rows="4" required maxlength="5000"></textarea></label>
-          <div class="form-bottom"><p id="formStatus" role="status" aria-live="polite"></p><button class="button button-primary" type="submit" id="submitButton">Send message <span>↗</span></button></div>
-        </form>
-        <div class="contact-alternatives">
-          <a href="https://github.com/Krishu04rajput" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
-          <a href="https://github.com/dy2097441-coder" target="_blank" rel="noopener noreferrer">Divyansh's GitHub <span>↗</span></a>
+      <div class="section-wrap contact-inner">
+        <p class="overline">HAVE AN IDEA IN MIND?</p>
+
+        <h2>Good things start<br>with <em>a conversation.</em></h2>
+
+        <p class="contact-copy">
+          Have a project, a question, or an interesting problem?
+          We'd love to hear about it.
+        </p>
+
+        <!-- Replace with your preferred contact email -->
+        <a class="button button-light" href="mailto:hello@kdstudio.dev">
+          Say hello <span>↗</span>
+        </a>
+
+        <div class="contact-bottom">
+          <span>OPEN TO COLLABORATIONS & GOOD QUESTIONS</span>
+          <span>NO BIG AGENCY ENERGY. JUST BUILDING.</span>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer section-wrap">
-    <a class="brand footer-brand" href="#home"><span class="brand-mark">K<span>&</span>D</span><span class="brand-name">STUDIO<span class="brand-dot">.</span></span></a>
-    <p>Independent minds. Built with intent.</p>
-    <span class="footer-copy">© <span id="currentYear"></span> K&D Studio</span>
+    <a class="footer-brand" href="#home">K<span>&</span>D <small>STUDIO</small></a>
+
+    <span>Made with curiosity, not a template.</span>
+
+    <span>© <span id="currentYear"></span> K&D Studio</span>
   </footer>
 </body>
 </html>

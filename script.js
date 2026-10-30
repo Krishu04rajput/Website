@@ -1,3 +1,143 @@
-const menuButton=document.querySelector('.menu-btn');const nav=document.querySelector('.nav-links');menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false')}));document.getElementById('year').textContent=new Date().getFullYear();
-document.querySelectorAll('[data-person]').forEach(link=>link.addEventListener('click',()=>{document.querySelector('select[name="person"]').value=link.dataset.person;}));
-const form=document.getElementById('contact-form');const statusEl=document.getElementById('form-status');form.addEventListener('submit',async event=>{event.preventDefault();const submit=form.querySelector('button[type="submit"]');submit.disabled=true;submit.style.opacity='.65';statusEl.className='form-status';statusEl.textContent='Sending your enquiry…';try{const payload=Object.fromEntries(new FormData(form).entries());const response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const result=await response.json().catch(()=>({}));if(!response.ok)throw new Error(result.error||'Could not send your message. Please try again.');form.reset();statusEl.className='form-status success';statusEl.textContent='Message sent successfully. Thanks — we will follow up using the email you provided.';}catch(error){statusEl.className='form-status error';statusEl.textContent=error.message||'Something went wrong. Please try again later.';}finally{submit.disabled=false;submit.style.opacity='1';}});
+"use strict";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  const scrollProgress = document.getElementById("scrollProgress");
+  const year = document.getElementById("currentYear");
+
+  // Automatically update the copyright year.
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+  // Mobile navigation.
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      navLinks.classList.toggle("open", !isOpen);
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (
+        navLinks.classList.contains("open") &&
+        !navLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+      }
+    });
+  }
+
+  // Scroll progress indicator.
+  function updateScrollProgress() {
+    if (!scrollProgress) return;
+
+    const scrollableHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+
+    const progress =
+      scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
+
+    scrollProgress.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+  }
+
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  updateScrollProgress();
+
+  // Reveal elements as they enter the viewport.
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealElements.forEach((element) => observer.observe(element));
+  } else {
+    revealElements.forEach((element) => element.classList.add("is-visible"));
+  }
+
+  // Contact form: submit to the existing Vercel /api/contact endpoint.
+  const contactForm = document.getElementById("contactForm");
+  const formStatus = document.getElementById("formStatus");
+  const submitButton = document.getElementById("submitButton");
+
+  if (contactForm && formStatus && submitButton) {
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      formStatus.textContent = "";
+      formStatus.className = "";
+
+      const originalButtonText = submitButton.innerHTML;
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending...";
+
+      const formData = new FormData(contactForm);
+
+      const payload = {
+        name: String(formData.get("name") || "").trim(),
+        email: String(formData.get("email") || "").trim(),
+        message: String(formData.get("message") || "").trim()
+      };
+
+      if (!payload.name || !payload.email || !payload.message) {
+        formStatus.textContent = "Please complete every field.";
+        formStatus.className = "error";
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+        return;
+      }
+
+      try {
+        const response = await fetch(contactForm.action || "/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          throw new Error(result.error || result.message || "Message could not be sent.");
+        }
+
+        formStatus.textContent = result.message || "Message sent successfully. Thanks for reaching out!";
+        formStatus.className = "success";
+        contactForm.reset();
+      } catch (error) {
+        console.error("Contact form error:", error);
+
+        formStatus.textContent =
+          error.message ||
+          "Unable to send your message right now. Please try again later.";
+
+        formStatus.className = "error";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      }
+    });
+  }
+});

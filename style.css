@@ -1,7 +1,11 @@
-/* OutFrame embedded project showcase */
+/* ==========================================
+   OUTFRAME STUDIO — EMBEDDED SHOWCASE
+   Original stylesheet remains intact above.
+   ========================================== */
+
 .showcase-frame {
   margin-top: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(239, 239, 231, 0.14);
   background: #10110f;
   overflow: hidden;
 }
@@ -13,7 +17,8 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 0 1.25rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(239, 239, 231, 0.12);
+  color: #efefe7;
   font-family: "DM Mono", monospace;
   font-size: 10px;
   letter-spacing: 0.08em;
@@ -25,15 +30,21 @@
 }
 
 .showcase-dots i {
+  display: block;
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #b6ff3b;
+  background: #c8ff39;
 }
 
 .showcase-bar a {
-  color: #b6ff3b;
+  color: #c8ff39;
   text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.showcase-bar a:hover {
+  opacity: 0.7;
 }
 
 .showcase-frame iframe {
@@ -47,18 +58,27 @@
 
 .showcase-note {
   margin-top: 1rem;
-  font-size: 12px;
-  opacity: 0.65;
-  line-height: 1.7;
+  color: #8d8f84;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  line-height: 1.8;
 }
 
 @media (max-width: 600px) {
   .showcase-bar {
+    min-height: 52px;
+    gap: 0.5rem;
     padding: 0 0.75rem;
     font-size: 8px;
+    letter-spacing: 0.03em;
   }
 
   .showcase-frame iframe {
+    height: 65vh;
     min-height: 300px;
+  }
+
+  .showcase-note {
+    font-size: 10px;
   }
 }

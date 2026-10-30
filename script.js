@@ -1,76 +1,24 @@
-(() => {
-const menuToggle = document.getElementById(“menuToggle”);
-const navLinks = document.getElementById(“navLinks”);
-const scrollProgress = document.getElementById(“scrollProgress”);
-const currentYear = document.getElementById(“currentYear”);
-
-// Automatically update the footer year.
-if (currentYear) {
-currentYear.textContent = new Date().getFullYear();
-}
-
-// Mobile navigation.
-if (menuToggle && navLinks) {
-menuToggle.addEventListener(“click”, () => {
-const isOpen = menuToggle.getAttribute(“aria-expanded”) === “true”;
-
-  menuToggle.setAttribute("aria-expanded", String(!isOpen));
-  menuToggle.setAttribute(
-    "aria-label",
-    isOpen ? "Open navigation" : "Close navigation"
-  );
-  navLinks.classList.toggle("is-open", !isOpen);
+const menu = document.getElementById('menu');
+const nav = document.getElementById('nav');
+const progress = document.getElementById('progress');
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
+menu?.addEventListener('click', () => {
+  const open = menu.getAttribute('aria-expanded') === 'true';
+  menu.setAttribute('aria-expanded', String(!open));
+  nav.classList.toggle('open', !open);
 });
-navLinks.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation");
-    navLinks.classList.remove("is-open");
-  });
-});
-
+nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  nav.classList.remove('open'); menu?.setAttribute('aria-expanded', 'false');
+}));
+function updateProgress() {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  if (progress) progress.style.width = `${max > 0 ? scrollY / max * 100 : 0}%`;
 }
-
-// Reading progress indicator.
-const updateProgress = () => {
-if (!scrollProgress) return;
-
-const scrollable =
-  document.documentElement.scrollHeight - window.innerHeight;
-const progress =
-  scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-scrollProgress.style.width = `${progress}%`;
-
-};
-
-window.addEventListener(“scroll”, updateProgress, { passive: true });
-updateProgress();
-
-// Reveal content as it enters the viewport.
-const revealTargets = document.querySelectorAll(
-“.section-heading, .project-card, .person-card, .approach-item, .intro-strip, .contact-inner”
-);
-
-if (
-“IntersectionObserver” in window &&
-!window.matchMedia(”(prefers-reduced-motion: reduce)”).matches
-) {
-revealTargets.forEach((element) => {
-element.classList.add(“reveal”);
-});
-
-const observer = new IntersectionObserver(
-  (entries, currentObserver) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        currentObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-revealTargets.forEach((element) => observer.observe(element));
-
-}
-})();
+addEventListener('scroll', updateProgress, {passive:true}); updateProgress();
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+} else document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));

@@ -4,26 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#10110f">
-  <meta name="description" content="OutFrame Studio — Independent digital design, software, and experimental experiences.">
+  <meta name="description" content="OutFrame Studio — Independent digital design, software, games, operating systems, and experimental technology.">
   <title>OutFrame Studio® — Beyond The Expected</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="noise" aria-hidden="true"></div>
 
+  <!-- NAVIGATION: ORIGINAL LOGO PRESERVED -->
   <header class="navbar">
     <a class="brand" href="#home" aria-label="OutFrame Studio home">
-<img src="assets/outframe-logo.png" alt="OutFrame Studio logo">
-      <span>OUTFRAME<span class="brand-light">®</span><small>INDEPENDENT DIGITAL STUDIO</small></span>
+      <img src="assets/outframe-logo.png" alt="OutFrame Studio logo">
+      <span>
+        OUTFRAME<span class="brand-light">®</span>
+        <small>INDEPENDENT DIGITAL STUDIO</small>
+      </span>
     </a>
 
     <div class="nav-right">
       <span class="availability"><i></i> OPEN FOR SELECT PROJECTS</span>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span>
       </button>
     </div>
@@ -31,12 +39,15 @@
     <nav class="menu" id="menu">
       <a href="#work"><span>01</span> Selected work</a>
       <a href="#about"><span>02</span> The studio</a>
-      <a href="#contact"><span>03</span> Get in touch</a>
+      <a href="#showcase"><span>03</span> Live showcase</a>
+      <a href="#contact"><span>04</span> Get in touch</a>
       <p>GOOD IDEAS DON'T NEED PERMISSION.</p>
     </nav>
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-meta">
         <span>CREATIVE TECHNOLOGY / 2026</span>
@@ -68,57 +79,124 @@
         <span>THE FRAME<span class="acid-dot">.</span></span>
       </div>
 
-      <div class="hero-index"><span>OFS — 001</span><span>SCROLL TO EXPLORE ↓</span></div>
-    </section>
-
-    <section class="ticker" aria-label="Studio disciplines">
-      <div class="ticker-track">
-        <span>DESIGN WITHOUT DEFAULTS <b>✳</b> BUILD WHAT'S NEXT <b>✳</b> DIGITAL WITH INTENT <b>✳</b> THINK OUTSIDE THE FRAME <b>✳</b></span>
-        <span aria-hidden="true">DESIGN WITHOUT DEFAULTS <b>✳</b> BUILD WHAT'S NEXT <b>✳</b> DIGITAL WITH INTENT <b>✳</b> THINK OUTSIDE THE FRAME <b>✳</b></span>
+      <div class="hero-index">
+        <span>OFS — 001</span>
+        <span>SCROLL TO EXPLORE ↓</span>
       </div>
     </section>
 
+    <!-- MOVING TICKER -->
+    <section class="ticker" aria-label="Studio disciplines">
+      <div class="ticker-track">
+        <span>
+          DESIGN WITHOUT DEFAULTS <b>✳</b>
+          BUILD WHAT'S NEXT <b>✳</b>
+          DIGITAL WITH INTENT <b>✳</b>
+          THINK OUTSIDE THE FRAME <b>✳</b>
+        </span>
+
+        <span aria-hidden="true">
+          DESIGN WITHOUT DEFAULTS <b>✳</b>
+          BUILD WHAT'S NEXT <b>✳</b>
+          DIGITAL WITH INTENT <b>✳</b>
+          THINK OUTSIDE THE FRAME <b>✳</b>
+        </span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
     <section class="work section-pad" id="work">
       <div class="section-heading">
         <div>
           <span class="eyebrow">01 / SELECTED PROJECTS</span>
           <h2>THE WORK<span class="acid-dot">.</span></h2>
         </div>
-        <p>Different problems.<br>Unusual solutions.</p>
+        <p>
+          Different problems.<br>
+          Unusual solutions.
+        </p>
       </div>
 
       <div class="project-grid">
-        <a class="project project-large" href="https://github.com/Krishu04rajput/HIVAI" target="_blank" rel="noreferrer">
+
+        <!-- 01 HIVAI -->
+        <a class="project project-large"
+          href="https://github.com/Krishu04rajput/HIVAI"
+          target="_blank" rel="noopener noreferrer">
+
           <div class="project-visual visual-hivai">
-            <div class="visual-top"><span>OFS—001</span><span>ARTIFICIAL INTELLIGENCE</span></div>
+            <div class="visual-top">
+              <span>OFS—001</span>
+              <span>ARTIFICIAL INTELLIGENCE</span>
+            </div>
+
             <div class="hivai-orbit orbit-one"></div>
             <div class="hivai-orbit orbit-two"></div>
             <div class="hivai-core"></div>
+
             <div class="hivai-word">HIVAI<span>™</span></div>
-            <div class="visual-bottom"><span>INTELLIGENCE, REIMAGINED.</span><span>↗</span></div>
+
+            <div class="visual-bottom">
+              <span>INTELLIGENCE, REIMAGINED.</span>
+              <span>↗</span>
+            </div>
           </div>
+
           <div class="project-info">
-            <div><h3>HIVAI</h3><p>A personal AI ecosystem with a vision of its own.</p></div>
+            <div>
+              <h3>HIVAI</h3>
+              <p>A personal AI ecosystem exploring a new way to interact with intelligence.</p>
+            </div>
             <span class="project-type">AI / SOFTWARE</span>
           </div>
         </a>
 
-        <a class="project project-small" href="https://github.com/Krishu04rajput/Synapse" target="_blank" rel="noreferrer">
+        <!-- 02 SYNAPSE -->
+        <a class="project project-small"
+          href="https://github.com/Krishu04rajput/Synapse"
+          target="_blank" rel="noopener noreferrer">
+
           <div class="project-visual visual-synapse">
-            <div class="visual-top"><span>OFS—002</span><span>COMMUNICATION</span></div>
-            <div class="synapse-mark"><span></span><span></span><span></span><span></span><span></span><b>S</b></div>
-            <div class="synapse-label">A BETTER WAY<br>TO CONNECT.</div>
-            <div class="visual-bottom"><span>SYNAPSE / CONNECTED</span><span>↗</span></div>
+            <div class="visual-top">
+              <span>OFS—002</span>
+              <span>COMMUNICATION</span>
+            </div>
+
+            <div class="synapse-mark">
+              <span></span><span></span><span></span>
+              <span></span><span></span><b>S</b>
+            </div>
+
+            <div class="synapse-label">
+              A BETTER WAY<br>TO CONNECT.
+            </div>
+
+            <div class="visual-bottom">
+              <span>SYNAPSE / CONNECTED</span>
+              <span>↗</span>
+            </div>
           </div>
+
           <div class="project-info">
-            <div><h3>Synapse</h3><p>Communication, stripped back to what matters.</p></div>
+            <div>
+              <h3>Synapse</h3>
+              <p>Communication, stripped back to what matters.</p>
+            </div>
             <span class="project-type">PRODUCT / UI</span>
           </div>
         </a>
 
-        <a class="project project-small" href="https://github.com/Krishu04rajput/VoxelCraft" target="_blank" rel="noreferrer">
+        <!-- 03 THE HOLLOW -->
+        <a class="project project-small"
+          href="https://github.com/Krishu04rajput/The_Hollow"
+          target="_blank" rel="noopener noreferrer">
+
           <div class="project-visual visual-voxel">
-            <div class="visual-top"><span>OFS—003</span><span>INTERACTIVE WORLDS</span></div>
+            <div class="visual-top">
+              <span>OFS—003</span>
+              <span>INTERACTIVE HORROR</span>
+            </div>
+
             <div class="voxel-world">
               <div class="voxel-cube cube-a"></div>
               <div class="voxel-cube cube-b"></div>
@@ -126,81 +204,407 @@
               <div class="voxel-cube cube-d"></div>
               <div class="voxel-cube cube-e"></div>
             </div>
-            <div class="voxel-title">PLAY<br>BEYOND.</div>
-            <div class="visual-bottom"><span>VOXELCRAFT / WORLD 001</span><span>↗</span></div>
+
+            <div class="voxel-title">
+              ENTER<br>THE HOLLOW.
+            </div>
+
+            <div class="visual-bottom">
+              <span>THE HOLLOW / UNKNOWN</span>
+              <span>↗</span>
+            </div>
           </div>
+
           <div class="project-info">
-            <div><h3>VoxelCraft</h3><p>Building new possibilities, one block at a time.</p></div>
+            <div>
+              <h3>The Hollow</h3>
+              <p>A horror game project built around atmosphere, mystery, and the unknown.</p>
+            </div>
+            <span class="project-type">GAME / HORROR</span>
+          </div>
+        </a>
+
+        <!-- 04 VOXELCRAFT -->
+        <a class="project project-large"
+          href="https://github.com/Krishu04rajput/VoxelCraft"
+          target="_blank" rel="noopener noreferrer">
+
+          <div class="project-visual visual-voxel">
+            <div class="visual-top">
+              <span>OFS—004</span>
+              <span>INTERACTIVE WORLDS</span>
+            </div>
+
+            <div class="voxel-world">
+              <div class="voxel-cube cube-a"></div>
+              <div class="voxel-cube cube-b"></div>
+              <div class="voxel-cube cube-c"></div>
+              <div class="voxel-cube cube-d"></div>
+              <div class="voxel-cube cube-e"></div>
+            </div>
+
+            <div class="voxel-title">
+              PLAY<br>BEYOND.
+            </div>
+
+            <div class="visual-bottom">
+              <span>VOXELCRAFT / WORLD 001</span>
+              <span>↗</span>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <h3>VoxelCraft</h3>
+              <p>Building new possibilities, one block at a time.</p>
+            </div>
             <span class="project-type">GAME / 3D</span>
           </div>
         </a>
 
-        <a class="project project-large" href="https://github.com/Krishu04rajput/AI-Forge" target="_blank" rel="noreferrer">
+        <!-- 05 DEVO OS -->
+        <a class="project project-small"
+          href="https://github.com/Krishu04rajput"
+          target="_blank" rel="noopener noreferrer">
+
           <div class="project-visual visual-forge">
-            <div class="visual-top"><span>OFS—004</span><span>LEARNING / TECHNOLOGY</span></div>
+            <div class="visual-top">
+              <span>OFS—005</span>
+              <span>OPERATING SYSTEMS</span>
+            </div>
+
             <div class="forge-lines"></div>
-            <div class="forge-title">LEARN.<br>BUILD.<br><span>REPEAT.</span></div>
-            <div class="forge-index">A NEW GENERATION<br>OF BUILDERS.</div>
-            <div class="visual-bottom"><span>AI-FORGE / KNOWLEDGE IN MOTION</span><span>↗</span></div>
+
+            <div class="forge-title">
+              DEVO<br><span>OS.</span>
+            </div>
+
+            <div class="forge-index">
+              A NEW DESKTOP<br>EXPERIENCE.
+            </div>
+
+            <div class="visual-bottom">
+              <span>DEVO OS / BUILT DIFFERENT</span>
+              <span>↗</span>
+            </div>
           </div>
+
           <div class="project-info">
-            <div><h3>AI-Forge</h3><p>A space for curiosity to become capability.</p></div>
-            <span class="project-type">EDTECH / WEB</span>
+            <div>
+              <h3>DEVO OS</h3>
+              <p>A Linux-based operating system concept with a distinctive desktop experience.</p>
+            </div>
+            <span class="project-type">LINUX / OS</span>
           </div>
         </a>
+
+        <!-- 06 ICEBERG OS -->
+        <a class="project project-small"
+          href="https://github.com/dy2097441-coder/iceberg-OS"
+          target="_blank" rel="noopener noreferrer">
+
+          <div class="project-visual visual-synapse">
+            <div class="visual-top">
+              <span>OFS—006</span>
+              <span>DIVYANSH / SYSTEMS</span>
+            </div>
+
+            <div class="synapse-mark">
+              <span></span><span></span><span></span>
+              <span></span><span></span><b>I</b>
+            </div>
+
+            <div class="synapse-label">
+              A DIFFERENT<br>WAY TO COMPUTE.
+            </div>
+
+            <div class="visual-bottom">
+              <span>ICEBERG OS / SYSTEM PROJECT</span>
+              <span>↗</span>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <h3>Iceberg OS</h3>
+              <p>An operating system project by Divyansh.</p>
+            </div>
+            <span class="project-type">OS / SOFTWARE</span>
+          </div>
+        </a>
+
+        <!-- 07 ICE STORE -->
+        <a class="project project-small"
+          href="https://github.com/dy2097441-coder/ice-store"
+          target="_blank" rel="noopener noreferrer">
+
+          <div class="project-visual visual-hivai">
+            <div class="visual-top">
+              <span>OFS—007</span>
+              <span>APP ECOSYSTEM</span>
+            </div>
+
+            <div class="hivai-orbit orbit-one"></div>
+            <div class="hivai-orbit orbit-two"></div>
+            <div class="hivai-core"></div>
+
+            <div class="hivai-word">ICE<span>™</span></div>
+
+            <div class="visual-bottom">
+              <span>ICE STORE / DISCOVER MORE</span>
+              <span>↗</span>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <h3>Ice Store</h3>
+              <p>An application store project designed by Divyansh.</p>
+            </div>
+            <span class="project-type">WEB / APPS</span>
+          </div>
+        </a>
+
+        <!-- 08 ICE UPDATES -->
+        <a class="project project-small"
+          href="https://github.com/dy2097441-coder/ice-updates"
+          target="_blank" rel="noopener noreferrer">
+
+          <div class="project-visual visual-voxel">
+            <div class="visual-top">
+              <span>OFS—008</span>
+              <span>UPDATES / SOFTWARE</span>
+            </div>
+
+            <div class="voxel-world">
+              <div class="voxel-cube cube-a"></div>
+              <div class="voxel-cube cube-b"></div>
+              <div class="voxel-cube cube-c"></div>
+              <div class="voxel-cube cube-d"></div>
+              <div class="voxel-cube cube-e"></div>
+            </div>
+
+            <div class="voxel-title">
+              ALWAYS<br>EVOLVING.
+            </div>
+
+            <div class="visual-bottom">
+              <span>ICE UPDATES / NEW RELEASES</span>
+              <span>↗</span>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <h3>Ice Updates</h3>
+              <p>A software updates project by Divyansh.</p>
+            </div>
+            <span class="project-type">SOFTWARE / WEB</span>
+          </div>
+        </a>
+
+        <!-- 09 ICEBERG WEBPAGE -->
+        <a class="project project-large"
+          href="https://github.com/dy2097441-coder/iceberg-webpage"
+          target="_blank" rel="noopener noreferrer">
+
+          <div class="project-visual visual-forge">
+            <div class="visual-top">
+              <span>OFS—009</span>
+              <span>WEB EXPERIENCE</span>
+            </div>
+
+            <div class="forge-lines"></div>
+
+            <div class="forge-title">
+              BEYOND<br><span>THE WEB.</span>
+            </div>
+
+            <div class="forge-index">
+              DIGITAL EXPERIENCES<br>BY DIVYANSH.
+            </div>
+
+            <div class="visual-bottom">
+              <span>ICEBERG / WEB PROJECT</span>
+              <span>↗</span>
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div>
+              <h3>Iceberg Webpage</h3>
+              <p>A web experience created by Divyansh.</p>
+            </div>
+            <span class="project-type">WEB / DESIGN</span>
+          </div>
+        </a>
+
       </div>
 
       <div class="work-footer">
-        <span>MORE EXPERIMENTS. MORE TO COME.</span>
-        <a href="https://github.com/Krishu04rajput" target="_blank" rel="noreferrer">EXPLORE GITHUB ↗</a>
+        <span>INDEPENDENT IDEAS. COLLECTIVE CREATIVITY.</span>
+        <a href="https://github.com/Krishu04rajput"
+          target="_blank" rel="noopener noreferrer">
+          EXPLORE GITHUB ↗
+        </a>
       </div>
     </section>
 
+    <!-- LIVE PROJECT SHOWCASE -->
+    <section class="section-pad" id="showcase">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">02 / LIVE SHOWCASE</span>
+          <h2>TAKE A LOOK<span class="acid-dot">.</span></h2>
+        </div>
+
+        <p>
+          Experience the project<br>
+          without leaving the studio.
+        </p>
+      </div>
+
+      <div class="showcase-frame">
+        <div class="showcase-bar">
+          <div class="showcase-dots" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </div>
+
+          <span>OUTFRAME / PROJECT PREVIEW</span>
+
+          <a href="https://drive.google.com/file/d/1TKaeuhDU46w6Tw8UpyJwLDJPNHxNj3Aw/view"
+            target="_blank" rel="noopener noreferrer">
+            OPEN EXTERNALLY ↗
+          </a>
+        </div>
+
+        <iframe
+          src="https://drive.google.com/file/d/1TKaeuhDU46w6Tw8UpyJwLDJPNHxNj3Aw/preview"
+          title="OutFrame Studio project showcase"
+          loading="lazy"
+          allow="autoplay"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p class="showcase-note">
+        If the preview doesn't load, make sure the Google Drive file's
+        sharing permissions allow viewers to access it.
+      </p>
+    </section>
+
+    <!-- MANIFESTO -->
     <section class="manifesto" id="about">
-      <div class="manifesto-top"><span class="eyebrow">02 / WHAT WE BELIEVE</span><span>THE OUTFRAME APPROACH</span></div>
-      <h2>THE INTERNET<br>DOESN'T NEED<br>MORE <span class="outline-text">OF THE</span><br>SAME<span class="acid-dot">.</span></h2>
+      <div class="manifesto-top">
+        <span class="eyebrow">03 / WHAT WE BELIEVE</span>
+        <span>THE OUTFRAME APPROACH</span>
+      </div>
+
+      <h2>
+        THE INTERNET<br>
+        DOESN'T NEED<br>
+        MORE <span class="outline-text">OF THE</span><br>
+        SAME<span class="acid-dot">.</span>
+      </h2>
+
       <div class="manifesto-bottom">
         <div class="manifesto-symbol">O<span>↗</span></div>
-        <p>We explore the space between design and technology. We experiment, question the obvious, and turn ambitious ideas into things people can actually use. No unnecessary noise. No design by default.</p>
+
+        <p>
+          We explore the space between design and technology.
+          We experiment, question the obvious, and turn ambitious
+          ideas into things people can actually use.
+          No unnecessary noise. No design by default.
+        </p>
       </div>
     </section>
 
+    <!-- PRINCIPLES -->
     <section class="principles section-pad">
-      <div class="principle-heading"><span class="eyebrow">03 / THE METHOD</span><span>LESS ORDINARY, MORE INTENTIONAL.</span></div>
-      <div class="principle-row"><span>01</span><h3>QUESTION THE DEFAULT.</h3><p>Start with why, not with a template.</p><b>↗</b></div>
-      <div class="principle-row"><span>02</span><h3>MAKE IT MATTER.</h3><p>Good design should do more than look good.</p><b>↗</b></div>
-      <div class="principle-row"><span>03</span><h3>BUILD THE REAL THING.</h3><p>Ideas are only the beginning.</p><b>↗</b></div>
+      <div class="principle-heading">
+        <span class="eyebrow">04 / THE METHOD</span>
+        <span>LESS ORDINARY, MORE INTENTIONAL.</span>
+      </div>
+
+      <div class="principle-row">
+        <span>01</span>
+        <h3>QUESTION THE DEFAULT.</h3>
+        <p>Start with why, not with a template.</p>
+        <b>↗</b>
+      </div>
+
+      <div class="principle-row">
+        <span>02</span>
+        <h3>MAKE IT MATTER.</h3>
+        <p>Good design should do more than look good.</p>
+        <b>↗</b>
+      </div>
+
+      <div class="principle-row">
+        <span>03</span>
+        <h3>BUILD THE REAL THING.</h3>
+        <p>Ideas are only the beginning.</p>
+        <b>↗</b>
+      </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="contact" id="contact">
-      <div class="contact-top"><span class="eyebrow">04 / HAVE SOMETHING IN MIND?</span><span>LET'S MAKE IT REAL.</span></div>
-      <h2>LET'S MAKE<br><span class="outline-text">SOMETHING</span><br>MATTER<span class="acid-dot">.</span></h2>
+      <div class="contact-top">
+        <span class="eyebrow">05 / HAVE SOMETHING IN MIND?</span>
+        <span>LET'S MAKE IT REAL.</span>
+      </div>
+
+      <h2>
+        LET'S MAKE<br>
+        <span class="outline-text">SOMETHING</span><br>
+        MATTER<span class="acid-dot">.</span>
+      </h2>
+
       <a class="contact-link" href="mailto:k.rajput0542@gmail.com">
-        <span>START A CONVERSATION</span><b>↗</b>
+        <span>START A CONVERSATION</span>
+        <b>↗</b>
       </a>
-      <div class="contact-note">A good project starts with a good question.</div>
+
+      <div class="contact-note">
+        A good project starts with a good question.
+      </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <a class="footer-brand" href="#home">OUTFRAME<span>®</span></a>
+    <a class="footer-brand" href="#home">
+      OUTFRAME<span>®</span>
+    </a>
+
     <span>INDEPENDENT BY DESIGN. © 2026</span>
+
     <div class="footer-links">
-      <a href="https://github.com/Krishu04rajput" target="_blank" rel="noreferrer">GITHUB ↗</a>
+      <a href="https://github.com/Krishu04rajput"
+        target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+
       <a href="mailto:k.rajput0542@gmail.com">EMAIL ↗</a>
+
       <a href="#home">BACK TO TOP ↑</a>
     </div>
   </footer>
 
+  <!-- NAVIGATION + SCROLL ANIMATIONS -->
   <script>
     const toggle = document.getElementById("menuToggle");
     const menu = document.getElementById("menu");
 
     toggle.addEventListener("click", () => {
       const isOpen = menu.classList.toggle("is-open");
+
       toggle.classList.toggle("is-open", isOpen);
       toggle.setAttribute("aria-expanded", String(isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+      toggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
     });
 
     menu.querySelectorAll("a").forEach(link => {
@@ -231,5 +635,6 @@
       });
     }
   </script>
+
 </body>
 </html>

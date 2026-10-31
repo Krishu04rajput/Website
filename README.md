@@ -1,48 +1,53 @@
-# K&D Studio — two-developer portfolio
+OUTFRAME STUDIO®
 
-A responsive, premium dark-theme portfolio for Krishu and Divyansh. Static front end + Vercel serverless contact API, ready to connect to GitHub and deploy on Vercel.
+Beyond conventional. Built with intention.
 
-## 1. Personal details
-- Krishu GitHub: `https://github.com/krishu04rajput`
-- Krishu Discord username: `krishu04rajput`
-- Divyansh GitHub: `https://github.com/div209`
-- Divyansh Discord username: `divyansh073868`
+Outframe Studio is an independent creative and technology studio working at the intersection of design, engineering, and experimentation.
 
-Discord profile links in the page are convenience links and may not resolve to a user profile in every Discord setup. If desired, replace them with server invites or another contact method you control.
+We transform ambitious ideas into digital products, distinctive web experiences, thoughtful visual identities, and experimental technology.
 
-## 2. Add portraits
-Create `assets/` and add:
-- `assets/krishu.jpg`
-- `assets/divyansh.jpg`
+Our work spans two worlds: collaborating with businesses and individuals to build meaningful digital solutions, while developing original products and independent projects that explore new possibilities.
 
-The cards show a designed initials fallback if those images are missing. Use portraits you have permission to publish.
+What We Do
 
-## 3. Set up the working contact form
-The form POSTs to `/api/contact`, a Vercel serverless function that sends enquiries through Resend. It does not expose the email API key to the browser.
+01 — Product & Software Engineering
+Building applications, software systems, digital tools, and functional products.
 
-1. Create a Resend account and verify a domain/sender as required by Resend.
-2. In Vercel → Project → Settings → Environment Variables, add:
-   - `RESEND_API_KEY` = your private Resend API key
-   - `CONTACT_TO` = inbox that should receive enquiries
-   - `CONTACT_FROM` = verified sender, e.g. `K&D Studio <contact@yourdomain.com>`
-3. Add the variables to Preview and Production environments as appropriate, then redeploy.
+02 — Digital Experiences
+Designing and developing websites, interfaces, and interactive environments.
 
-Never put these secrets in `script.js`, HTML, or a public GitHub repository. Until configured, the form deliberately returns a clear “not configured” message.
+03 — Brand & Visual Design
+Creating distinctive brand identities, visual systems, and digital art direction.
 
-## 4. Deploy using GitHub + Vercel
-1. Create a new GitHub repository (for example `kd-studio-portfolio`).
-2. Upload the contents of this folder to the repository root (not the enclosing folder).
-3. On Vercel, import the GitHub repository. Framework preset: Other; build command: leave blank; output directory: `.`.
-4. Add the environment variables above, deploy, and test the form with a real enquiry.
-5. Future pushes to the connected production branch trigger deployments automatically.
+04 — Research & Experimentation
+Exploring emerging technologies, game development, creative engineering, and original concepts.
 
-`vercel.json` routes `/api/contact` to the serverless function. The site has no build step or package dependencies.
+Our Philosophy
 
-## 5. Customize before publishing
-- Replace Divyansh's generic skills and experience text in `index.html` with accurate details from him.
-- Replace "Building & learning" with a truthful experience summary for Krishu (no years were provided, so the site does not invent a number).
-- Add project demo URLs, real screenshots, project status, and any other relevant links.
-- Confirm that both people agree to publish their photos and contact details.
+We believe good ideas deserve thoughtful execution.
 
-## Local preview
-Open `index.html` for a visual-only preview. The contact API requires Vercel (or a compatible local serverless setup); it won't send mail by opening the HTML file directly.
+Design should have purpose. Technology should solve meaningful problems. Creativity should challenge familiar approaches.
+
+We value originality over imitation, substance over noise, and execution over empty promises.
+
+Our Two Directions
+
+Client Collaborations — Working with founders, businesses, and ambitious individuals to bring their ideas to life.
+
+Studio Ventures — Developing independent products, experimental concepts, and original digital projects.
+
+Our Vision
+
+To grow into a globally recognized independent studio known for its creative perspective, engineering quality, and original work.
+
+Connect
+
+Website: https://outframe-dev.vercel.app
+Email: k.rajput0542@gmail.com
+
+⸻
+
+OUTFRAME STUDIO®
+Beyond conventional. Built with intention.
+
+© 2026 Outframe Studio. All rights reserved.

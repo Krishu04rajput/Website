@@ -1,53 +1,46 @@
-OUTFRAME STUDIO®
+# Outframe Studio V4
 
-Beyond conventional. Built with intention.
+A complete static-site redesign based on the existing `Krishu04rajput/Website` repository and the supplied Floating Cliff hero prototype.
 
-Outframe Studio is an independent creative and technology studio working at the intersection of design, engineering, and experimentation.
+## Run locally
+Open `index.html` in a modern browser, or serve this folder with a local static server (recommended for ES modules):
+```bash
+python -m http.server 5500
+```
+Then visit `http://localhost:5500`.
 
-We transform ambitious ideas into digital products, distinctive web experiences, thoughtful visual identities, and experimental technology.
+## V4 design
+- Floating stone-cliff particle hero, with scroll-driven dispersal and pointer response.
+- Editorial horizontal project gallery with snap scrolling, controls and project counter.
+- Warm charcoal / stone / burnt-orange palette.
+- Cinematic section reveals, responsive layout and reduced-motion support.
+- Preserves the nine project destinations, live Google Drive showcase, manifesto, principles, email contact and Vercel contact endpoint.
 
-Our work spans two worlds: collaborating with businesses and individuals to build meaningful digital solutions, while developing original products and independent projects that explore new possibilities.
+## Notes
+- The original Outframe logo is referenced from the public GitHub repository at `assets/outframe-logo.png` so it remains the same brand asset. For a fully self-contained/offline copy, place the original logo at `assets/outframe-logo.png` and change the two logo references in `index.html` to that local path.
+- The hero uses Three.js from jsDelivr as an ES module. It requires an internet connection. If WebGL is unavailable, the rest of the site remains usable.
+- The contact API requires `RESEND_API_KEY`, `CONTACT_TO`, and optionally `CONTACT_FROM` in Vercel environment variables.
+- No dependencies or build step are required.
 
-What We Do
+## Floating ecosystem update
+- Animated waterfall particle streams.
+- Hanging botanical points with subtle sway and drifting leaves.
+- Floating Outframe emblem with a slow upward orbit.
+- Lightweight effects; reduced-motion preference is respected.
 
-01 — Product & Software Engineering
-Building applications, software systems, digital tools, and functional products.
+## Brand color and logo polish
+- Replaced the temporary floating letter with the existing official Outframe Studio logo asset.
+- Added a fine orbital ring, restrained light trail, and warm highlight.
+- Refined the hero palette with champagne, amber, botanical moss, and waterfall teal accents.
+- Kept the original wordmark/logo asset as the single source of brand identity.
 
-02 — Digital Experiences
-Designing and developing websites, interfaces, and interactive environments.
+## Official logo placement
+- `assets/outframe-full-lockup.png`: full emblem + OUTFRAME STUDIO wordmark, floating beside the cliff.
+- `assets/outframe-mark.png`: icon-only emblem, used in the homepage particle field, favicon, and Approach section.
+- Both logo assets are bundled locally; no external logo image request is needed.
 
-03 — Brand & Visual Design
-Creating distinctive brand identities, visual systems, and digital art direction.
-
-04 — Research & Experimentation
-Exploring emerging technologies, game development, creative engineering, and original concepts.
-
-Our Philosophy
-
-We believe good ideas deserve thoughtful execution.
-
-Design should have purpose. Technology should solve meaningful problems. Creativity should challenge familiar approaches.
-
-We value originality over imitation, substance over noise, and execution over empty promises.
-
-Our Two Directions
-
-Client Collaborations — Working with founders, businesses, and ambitious individuals to bring their ideas to life.
-
-Studio Ventures — Developing independent products, experimental concepts, and original digital projects.
-
-Our Vision
-
-To grow into a globally recognized independent studio known for its creative perspective, engineering quality, and original work.
-
-Connect
-
-Website: https://outframe-dev.vercel.app
-Email: k.rajput0542@gmail.com
-
-⸻
-
-OUTFRAME STUDIO®
-Beyond conventional. Built with intention.
-
-© 2026 Outframe Studio. All rights reserved.
+## Homepage refinement
+- Restored the original website favicon asset: `https://raw.githubusercontent.com/Krishu04rajput/Website/main/assets/outframe-logo.png`.
+- Kept the full OUTFRAME STUDIO lockup floating beside the cliff.
+- Simplified the hero by removing secondary decorative labels and reducing visual noise.
+- Kept the icon-only mark subtle in the particle field and in the Approach section.

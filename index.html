@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090908">
+  <meta name="description" content="Outframe Studio — independent creative technology, digital products and unusual ideas.">
+  <title>Outframe Studio® — Beyond the Expected</title>
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Krishu04rajput/Website/main/assets/outframe-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div><div class="scroll-progress" id="progress"></div>
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="Outframe Studio home">
+      <img src="https://raw.githubusercontent.com/Krishu04rajput/Website/main/assets/outframe-logo.png" alt="" onerror="this.style.display='none'">
+      <span>OUTFRAME<sup>®</sup><small>INDEPENDENT DIGITAL STUDIO</small></span>
+    </a>
+    <div class="nav-right">
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menu" aria-label="Open navigation"><span></span><span></span></button>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#work"><span>01</span> Selected work</a><a href="#showcase"><span>02</span> Live showcase</a>
+      <a href="#studio"><span>03</span> The studio</a><a href="#contact"><span>04</span> Contact</a>
+      <p>GOOD IDEAS DON'T NEED PERMISSION.</p>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero-scroll" id="heroScroll">
+      <div class="hero-stage" id="heroStage">
+        <canvas id="cliffCanvas" aria-label="Animated floating cliff with waterfalls and vegetation"></canvas><div class="floating-emblem floating-lockup" aria-label="Outframe Studio"><span class="emblem-orbit"></span><img class="emblem-logo" src="assets/outframe-full-lockup.png" alt="Outframe Studio"><span class="emblem-trail"></span><span class="emblem-spark"></span></div><div class="particle-mark" aria-hidden="true"><img src="assets/outframe-mark.png" alt=""></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">CREATIVE TECHNOLOGY / 2026 · INDEPENDENT BY DESIGN</p>
+          <h1>BEYOND<br><span class="outline">THE</span><br>FRAME<span class="accent">.</span></h1>
+          <p class="hero-description">We turn ambitious ideas into digital products, distinctive experiences and technology worth exploring.</p>
+          <a class="hero-cta" href="#work"><span>EXPLORE THE STUDIO</span><b>↘</b></a>
+        </div>
+        
+        <div class="hero-index"><span>OUTFRAME STUDIO</span><span>SCROLL TO EXPLORE ↓</span></div>
+        <div class="scroll-message" id="scrollMessage">A THOUGHT BECOMES SOMETHING REAL.</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Studio disciplines"><div class="ticker-track">
+      <span>DESIGN WITHOUT DEFAULTS <b>✳</b> BUILD WHAT'S NEXT <b>✳</b> DIGITAL WITH INTENT <b>✳</b> THINK BEYOND THE FRAME <b>✳</b></span>
+      <span aria-hidden="true">DESIGN WITHOUT DEFAULTS <b>✳</b> BUILD WHAT'S NEXT <b>✳</b> DIGITAL WITH INTENT <b>✳</b> THINK BEYOND THE FRAME <b>✳</b></span>
+    </div></section>
+
+    <section class="work section-pad" id="work">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">01 / SELECTED PROJECTS</span><h2>THE WORK<span class="accent">.</span></h2></div>
+        <p>Different problems.<br>Unusual solutions.</p>
+      </div>
+      <div class="work-intro reveal"><p>A selection of experiments, products and digital worlds from Outframe Studio and its collaborators.</p><span>2024 — 2026 / SELECTED BUILDS</span></div>
+      <div class="gallery-shell">
+        <div class="gallery-controls"><span>SCROLL TO EXPLORE <i>→</i></span><div><button id="galleryPrev" aria-label="Previous projects">←</button><button id="galleryNext" aria-label="Next projects">→</button><b id="galleryCount">01 — 09</b></div></div>
+        <div class="work-gallery" id="workGallery" tabindex="0" aria-label="Selected projects">
+          <a class="project-card card-hivai" href="https://github.com/Krishu04rajput/HIVAI" target="_blank" rel="noopener noreferrer">
+            <div class="card-art"><span class="card-kicker">OFS—001 / ARTIFICIAL INTELLIGENCE</span><div class="ai-orb"><i></i><i></i><i></i></div><strong>HIVAI<span>™</span></strong><span class="art-caption">INTELLIGENCE, REIMAGINED.</span></div>
+            <div class="card-info"><div><span class="card-type">AI / SOFTWARE</span><h3>HIVAI</h3><p>A personal AI ecosystem exploring a new way to interact with intelligence.</p></div><b>↗</b></div>
+          </a>
+          <a class="project-card card-synapse" href="https://github.com/Krishu04rajput/Synapse" target="_blank" rel="noopener noreferrer">
+            <div class="card-art"><span class="card-kicker">OFS—002 / COMMUNICATION</span><div class="synapse-art"><i></i><i></i><i></i><i></i><b>S</b></div><strong>SYNAPSE</strong><span class="art-caption">A BETTER WAY TO CONNECT.</span></div>
+            <div class="card-info"><div><span class="card-type">PRODUCT / UI</span><h3>Synapse</h3><p>Communication, stripped back to what matters.</p></div><b>↗</b></div>
+          </a>
+          <a class="project-card card-hollow" href="https://github.com/Krishu04rajput/The_Hollow" target="_blank" rel="noopener noreferrer">
+            <div class="card-art"><span class="card-kicker">OFS—003 / INTERACTIVE HORROR</span><div class="hollow-moon"></div><strong>THE<br>HOLLOW.</strong><span class="art-caption">ENTER THE UNKNOWN.</span></div>
+            <div class="card-info"><div><span class="card-type">GAME / HORROR</span><h3>The Hollow</h3><p>An atmospheric game project built around mystery and the unknown.</p></div><b>↗</b></div>
+          </a>
+          <a class="project-card card-voxel" href="https://github.com/Krishu04rajput/VoxelCraft" target="_blank" rel="noopener noreferrer">
+            <div class="card-art"><span class="card-kicker">OFS—004 / INTERACTIVE WORLDS</span><div class="voxel-stack"><i></i><i></i><i></i><i></i><i></i></div><strong>VOXELCRAFT</strong><span class="art-caption">WORLD 001 / BUILD BEYOND.</span></div>
+            <div class="card-info"><div><span class="card-type">GAME / 3D</span><h3>VoxelCraft</h3><p>Building new possibilities, one block at a time.</p></div><b>↗</b></div>
+          </a>
+          <a class="project-card card-devo" href="https://github.com/Krishu04rajput" target="_blank" rel="noopener noreferrer">
+            <div class="card-art"><span class="card-kicker">OFS—005 / OPERATING SYSTEMS</span><div class="devo-grid"></div><strong>DEVO<br>OS<span>.</span></strong><span class="art-caption">A NEW DESKTOP EXPERIENCE.</span></div>
+            <div class="card-info"><div><span class="card-type">LINUX / OS</span><h3>DEVO OS</h3><p>A Linux-based operating system concept with a distinctive desktop experience.</p></div><b>↗</b></div>
+          </a>
+          <a class="project-card card-iceberg" href="https://github.com/dy2097441-coder/iceberg-OS" target="_blank" rel="noopener noreferrer">
+            <div class="card-art"><span class="card-kicker">OFS—006 / DIVYANSH · SYSTEMS</span><div class="ice-shape"></div><strong>ICEBERG OS</strong><span class="art-caption">A DIFFERENT WAY TO COMPUTE.</span></div>
+            <div class="card-info"><div><span class="card-type">OS / SOFTWARE</span><h3>Iceberg OS</h3><p>An operating system project by Divyansh.</p></div><b>↗</b></div>
+          </a>
+          <a class="project-card card-store" href="https://github.com/dy2097441-coder/ice-store" target="_blank" rel="noopener noreferrer">
+            <div class="card-art"><span class="card-kicker">OFS—007 / APP ECOSYSTEM</span><div class="store-window"><i></i><i></i><i></i><b>ICE</b></div><strong>ICE STORE</strong><span class="art-caption">DISCOVER SOMETHING NEW.</span></div>
+            <div class="card-info"><div><span class="card-type">WEB / APPS</span><h3>Ice Store</h3><p>An application store project designed by Divyansh.</p></div><b>↗</b></div>
+          </a>
+          <a class="project-card card-updates" href="https://github.com/dy2097441-coder/ice-updates" target="_blank" rel="noopener noreferrer">
+            <div class="card-art"><span class="card-kicker">OFS—008 / SOFTWARE UPDATES</span><div class="update-rings"></div><strong>ICE UPDATES</strong><span class="art-caption">ALWAYS EVOLVING.</span></div>
+            <div class="card-info"><div><span class="card-type">SOFTWARE / WEB</span><h3>Ice Updates</h3><p>A software updates project by Divyansh.</p></div><b>↗</b></div>
+          </a>
+          <a class="project-card card-web" href="https://github.com/dy2097441-coder/iceberg-webpage" target="_blank" rel="noopener noreferrer">
+            <div class="card-art"><span class="card-kicker">OFS—009 / WEB EXPERIENCE</span><div class="web-window"><i></i><i></i><i></i><b></b></div><strong>ICEBERG<br>WEBPAGE</strong><span class="art-caption">DIGITAL WORLDS, OPENED.</span></div>
+            <div class="card-info"><div><span class="card-type">WEB / DESIGN</span><h3>Iceberg Webpage</h3><p>A web experience created by Divyansh.</p></div><b>↗</b></div>
+          </a>
+        </div>
+      </div>
+      <div class="work-footer"><span>INDEPENDENT IDEAS. COLLECTIVE CREATIVITY.</span><a href="https://github.com/Krishu04rajput" target="_blank" rel="noopener noreferrer">EXPLORE GITHUB ↗</a></div>
+    </section>
+
+    <section class="showcase section-pad" id="showcase">
+      <div class="section-heading reveal"><div><span class="eyebrow">02 / LIVE SHOWCASE</span><h2>TAKE A LOOK<span class="accent">.</span></h2></div><p>Experience the project<br>without leaving the studio.</p></div>
+      <div class="showcase-frame reveal"><div class="showcase-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>OUTFRAME / PROJECT PREVIEW</span><a href="https://drive.google.com/file/d/1TKaeuhDU46w6Tw8UpyJwLDJPNHxNj3Aw/view" target="_blank" rel="noopener noreferrer">OPEN EXTERNALLY ↗</a></div><iframe src="https://drive.google.com/file/d/1TKaeuhDU46w6Tw8UpyJwLDJPNHxNj3Aw/preview" title="Outframe Studio live project showcase" loading="lazy" allow="autoplay" allowfullscreen></iframe></div>
+    </section>
+
+    <section class="manifesto" id="studio">
+      <div class="manifesto-top reveal"><span class="eyebrow">03 / WHAT WE BELIEVE</span><span>THE OUTFRAME APPROACH</span></div>
+      <h2 class="reveal">THE INTERNET<br>DOESN'T NEED<br>MORE <span>OF THE</span><br>SAME<span class="accent">.</span></h2>
+      <div class="manifesto-bottom reveal"><div class="manifesto-symbol"><img src="assets/outframe-mark.png" alt="Outframe emblem"></div><p>We explore the space between design and technology. We experiment, question the obvious, and turn ambitious ideas into things people can actually use. No unnecessary noise. No design by default.</p></div>
+    </section>
+
+    <section class="principles section-pad">
+      <div class="principle-heading reveal"><span class="eyebrow">04 / THE METHOD</span><span>LESS ORDINARY, MORE INTENTIONAL.</span></div>
+      <div class="principle-row reveal"><span>01</span><h3>QUESTION THE DEFAULT.</h3><p>Start with why, not with a template.</p><b>↗</b></div>
+      <div class="principle-row reveal"><span>02</span><h3>MAKE IT MATTER.</h3><p>Good design should do more than look good.</p><b>↗</b></div>
+      <div class="principle-row reveal"><span>03</span><h3>BUILD THE REAL THING.</h3><p>Ideas are only the beginning.</p><b>↗</b></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-top reveal"><span class="eyebrow">05 / HAVE SOMETHING IN MIND?</span><span>LET'S MAKE IT REAL.</span></div>
+      <h2 class="reveal">LET'S MAKE<br><span class="outline">SOMETHING</span><br>MATTER<span class="accent">.</span></h2>
+      <a class="contact-link reveal" href="mailto:k.rajput0542@gmail.com"><span>START A CONVERSATION</span><b>↗</b></a>
+      <div class="contact-note">A good project starts with a good question.</div>
+    </section>
+  </main>
+  <footer class="footer"><a class="footer-brand" href="#home">OUTFRAME<sup>®</sup></a><span>INDEPENDENT BY DESIGN. © <span id="year">2026</span></span><div class="footer-links"><a href="https://github.com/Krishu04rajput" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="mailto:k.rajput0542@gmail.com">EMAIL ↗</a><a href="#home">BACK TO TOP ↑</a></div></footer>
+  <script type="module" src="script.js"></script>
+</body></html>

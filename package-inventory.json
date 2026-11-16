@@ -1,0 +1,39 @@
+{
+  "project": "OUTFRAME Studio M01 website integration",
+  "identity": "OUTFRAME Studio",
+  "reference_usage": "Scroll-driven exploded-view animation behavior only",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1525
+    },
+    {
+      "path": "assets/models/machine-parts.json",
+      "bytes": 56323
+    },
+    {
+      "path": "assets/models/outframe-m01.glb",
+      "bytes": 625100
+    },
+    {
+      "path": "index.html",
+      "bytes": 9499
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 23
+    },
+    {
+      "path": "script.js",
+      "bytes": 7064
+    },
+    {
+      "path": "style.css",
+      "bytes": 13533
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 41
+    }
+  ]
+}

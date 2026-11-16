@@ -1,237 +1,604 @@
-import { animate, createTimeline, stagger } from 'https://cdn.jsdelivr.net/npm/animejs@4.0.2/+esm';
 
-const $ = (selector, root = document) => root.querySelector(selector);
-const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
-const hero = $('#hero');
+import * as THREE from 'three';
+import {
+  animate,
+  createTimeline,
+  onScroll,
+  stagger
+} from 'https://cdn.jsdelivr.net/npm/animejs@4.0.2/+esm';
+
+const $ = (s, root = document) => root.querySelector(s);
+const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+
+$('#year').textContent = new Date().getFullYear();
+
+// NAVIGATION
+const toggle = $('.menu-toggle');
+const nav = $('.desktop-nav');
+
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+
+  $$('a', nav).forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+}
+
+// THREE.JS OF-01 CREATIVE ENGINE
+const canvas = $('#machine-canvas');
 const stage = $('.machine-stage');
-const svg = $('.machine');
-const year = $('#year');
+const fallback = $('#machine-fallback');
 
-if (year) year.textContent = new Date().getFullYear();
+let renderer, scene, camera, root, resizeObserver;
 
-if (!hero || !stage || !svg) {
-  console.warn('[OUTFRAME] OF-01 machine markup was not found; animation was not initialized.');
-} else {
-  // Give the existing OF-01 machine its own long, sticky scroll sequence.
-  // The original page sections, links, API and assets remain untouched.
-  const sequence = document.createElement('section');
-  sequence.className = 'machine-sequence';
-  sequence.id = 'of01-sequence';
-  sequence.setAttribute('aria-label', 'OF-01 mechanical engine disassembly sequence');
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  const sequenceHead = document.createElement('div');
-  sequenceHead.className = 'sequence-heading mono';
-  sequenceHead.innerHTML = '<span>OF—01 / MECHANICAL STUDY</span><span>SCROLL TO DECONSTRUCT</span>';
-  sequence.append(sequenceHead);
-  hero.insertAdjacentElement('afterend', sequence);
-  sequence.append(stage);
+if (canvas && stage) {
+  try {
+    renderer = new THREE.WebGLRenderer({
+      canvas,
+      alpha: true,
+      antialias: true,
+      powerPreference: 'high-performance'
+    });
 
-  const sequenceFoot = document.createElement('div');
-  sequenceFoot.className = 'sequence-foot mono';
-  sequenceFoot.innerHTML = '<span>OPTICAL COMPUTATION UNIT</span><span class="sequence-readout">ASSEMBLED / 00%</span>';
-  sequence.append(sequenceFoot);
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 1.7));
+    renderer.setClearColor(0x000000, 0);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.35;
 
-  // Split additional mechanical details into independently animated SVG groups.
-  const NS = 'http://www.w3.org/2000/svg';
-  const make = (tag, attrs = {}) => {
-    const el = document.createElementNS(NS, tag);
-    Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value));
-    return el;
-  };
-  const group = (name) => {
-    const g = make('g', { class: `of01-part ${name}` });
-    svg.append(g);
-    return g;
-  };
-  const circle = (g, cx, cy, r, attrs = {}) => g.append(make('circle', { cx, cy, r, ...attrs }));
-  const path = (g, d, attrs = {}) => g.append(make('path', { d, ...attrs }));
+    scene = new THREE.Scene();
 
-  const outerLock = group('outer-lock');
-  circle(outerLock, 450, 350, 244, { fill: 'none', stroke: '#c7bdae', 'stroke-width': 5, 'stroke-dasharray': '18 7 3 7' });
-  circle(outerLock, 450, 350, 258, { fill: 'none', stroke: '#d96b32', 'stroke-width': 2, 'stroke-dasharray': '2 11' });
-  for (let i = 0; i < 12; i++) {
-    const a = (Math.PI * 2 * i) / 12;
-    const x = 450 + Math.cos(a) * 244;
-    const y = 350 + Math.sin(a) * 244;
-    circle(outerLock, x, y, 5.5, { fill: '#d96b32', stroke: '#171614', 'stroke-width': 2 });
-  }
+    camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
+    camera.position.set(0, 1.0, 12.8);
 
-  const lensCartridge = group('lens-cartridge');
-  circle(lensCartridge, 450, 350, 112, { fill: 'none', stroke: '#ded4c5', 'stroke-width': 7 });
-  circle(lensCartridge, 450, 350, 102, { fill: 'none', stroke: '#d96b32', 'stroke-width': 3 });
-  circle(lensCartridge, 450, 350, 88, { fill: 'none', stroke: '#766e63', 'stroke-width': 2, 'stroke-dasharray': '4 5' });
-  circle(lensCartridge, 450, 350, 73, { fill: 'none', stroke: '#d4c8b8', 'stroke-width': 2 });
-  for (let i = 0; i < 8; i++) {
-    const a = (Math.PI * 2 * i) / 8;
-    const x = 450 + Math.cos(a) * 108;
-    const y = 350 + Math.sin(a) * 108;
-    circle(lensCartridge, x, y, 4, { fill: '#d96b32' });
-  }
+    scene.add(new THREE.HemisphereLight(0xe8dfd1, 0x17120e, 2.0));
 
-  const frontPlate = group('front-plate');
-  path(frontPlate, 'M450 105 L477 126 L474 153 L426 153 L423 126 Z', { fill: '#777168', stroke: '#e1d6c6', 'stroke-width': 2 });
-  path(frontPlate, 'M695 350 L674 377 L647 374 L647 326 L674 323 Z', { fill: '#777168', stroke: '#e1d6c6', 'stroke-width': 2 });
-  path(frontPlate, 'M450 595 L423 574 L426 547 L474 547 L477 574 Z', { fill: '#777168', stroke: '#e1d6c6', 'stroke-width': 2 });
-  path(frontPlate, 'M205 350 L226 323 L253 326 L253 374 L226 377 Z', { fill: '#777168', stroke: '#e1d6c6', 'stroke-width': 2 });
+    const key = new THREE.DirectionalLight(0xffe2c5, 3.3);
+    key.position.set(3, 5, 7);
+    scene.add(key);
 
-  const fasteners = group('fastener-set');
-  [[450,110],[690,350],[450,590],[210,350],[280,180],[620,180],[620,520],[280,520]].forEach(([x,y]) => {
-    circle(fasteners, x, y, 9, { fill: '#d96b32', stroke: '#171614', 'stroke-width': 3 });
-    path(fasteners, `M${x-4} ${y}h8`, { stroke: '#211d19', 'stroke-width': 2 });
-  });
+    const rim = new THREE.PointLight(0xd96b32, 65, 18);
+    rim.position.set(-3, 1, 1);
+    scene.add(rim);
 
-  const railLeft = group('rail-left');
-  path(railLeft, 'M250 250 L165 210 L145 230 L220 300 Z M250 450 L165 490 L145 470 L220 400 Z', {
-    fill: '#4c4942', stroke: '#c4b9a9', 'stroke-width': 3
-  });
-  const railRight = group('rail-right');
-  path(railRight, 'M650 250 L735 210 L755 230 L680 300 Z M650 450 L735 490 L755 470 L680 400 Z', {
-    fill: '#4c4942', stroke: '#c4b9a9', 'stroke-width': 3
-  });
+    const warm = new THREE.PointLight(0xff8a42, 48, 12);
+    warm.position.set(2, -1, 2);
+    scene.add(warm);
 
-  // A technical measurement overlay is separate from the original blueprint strokes.
-  const dimensions = group('dimension-overlay');
-  path(dimensions, 'M140 80V620 M130 80H150 M130 620H150 M760 80V620 M750 80H770 M750 620H770', {
-    fill: 'none', stroke: '#d96b32', 'stroke-width': 1.4, 'stroke-dasharray': '4 5', opacity: '.9'
-  });
-  path(dimensions, 'M140 350H760 M450 55V645', {
-    fill: 'none', stroke: '#d96b32', 'stroke-width': 1, 'stroke-dasharray': '3 9', opacity: '.55'
-  });
+    root = new THREE.Group();
+    scene.add(root);
 
-  // SVG transform origins must be local to each component, not the full SVG canvas.
-  $$('.machine > g, .machine .of01-part').forEach((el) => {
-    el.style.transformBox = 'fill-box';
-    el.style.transformOrigin = 'center';
-    el.style.transformStyle = 'preserve-3d';
-    el.style.willChange = 'transform, opacity';
-  });
+    // MATERIALS
+    const metal = new THREE.MeshStandardMaterial({
+      color: 0x77736d,
+      metalness: 0.88,
+      roughness: 0.27
+    });
 
-  const parts = {
-    cover: $('.front-ring'),
-    lock: outerLock,
-    plate: frontPlate,
-    fasteners,
-    lens: lensCartridge,
-    iris: $('.iris-module'),
-    core: $('.core-module'),
-    rear: $('.rear-module'),
-    brackets: $('.side-brackets'),
-    railsL: railLeft,
-    railsR: railRight,
-    ribs: $('.rear-ribs'),
-    blueprint: $('.blueprint-lines'),
-    dimensions
-  };
+    const darkMetal = new THREE.MeshStandardMaterial({
+      color: 0x24221e,
+      metalness: 0.9,
+      roughness: 0.3
+    });
 
-  // Continuous idle motion is applied to inner components; scroll motion is applied
-  // to their parent assemblies so the two animation systems do not fight.
-  animate(parts.lock, { rotate: '+=360deg', duration: 62000, ease: 'linear', loop: true });
-  animate(parts.lens, { rotate: '-=360deg', duration: 44000, ease: 'linear', loop: true });
-  animate('.iris-blades', { rotate: [0, 3, 0], duration: 5400, ease: 'inOutSine', alternate: true, loop: true });
-  animate('.core-module circle:nth-of-type(6)', { scale: [1, 1.2, 1], duration: 2800, ease: 'inOutSine', alternate: true, loop: true });
-  animate('.status-dot', { opacity: [.35, 1], scale: [.85, 1.2], duration: 1400, ease: 'inOutSine', alternate: true, loop: true });
+    const edgeMetal = new THREE.MeshStandardMaterial({
+      color: 0xb8aea0,
+      metalness: 0.86,
+      roughness: 0.22
+    });
 
-  const timeline = createTimeline({
-    autoplay: false,
-    defaults: { duration: 850, ease: 'inOutCubic' }
-  });
+    const orange = new THREE.MeshStandardMaterial({
+      color: 0xd96b32,
+      emissive: 0x8b2d08,
+      emissiveIntensity: 1.45,
+      metalness: 0.55,
+      roughness: 0.24
+    });
 
-  // Multi-axis, staged separation: lock hardware -> optical stack -> core -> rear chassis.
-  timeline
-    .add(parts.fasteners, { translateY: -210, translateX: 15, rotate: 48, scale: 1.35, opacity: .95 }, 0)
-    .add(parts.plate, { translateY: -185, translateX: 0, rotate: -28 }, 80)
-    .add(parts.cover, { translateY: -115, translateX: 165, rotate: 42, scale: 1.08 }, 160)
-    .add(parts.lock, { translateY: -205, translateX: -145, rotate: -62, scale: 1.12 }, 220)
-    .add(parts.lens, { translateY: -35, translateX: 230, rotate: 76, scale: 1.12 }, 300)
-    .add(parts.iris, { translateY: -115, translateX: -190, rotate: -50, scale: 1.12 }, 390)
-    .add(parts.core, { translateY: 150, translateX: 0, scale: 1.32 }, 490)
-    .add(parts.brackets, { translateY: 115, translateX: 0, rotate: 14, opacity: .65 }, 560)
-    .add(parts.railsL, { translateX: -170, translateY: 35, rotate: -28 }, 620)
-    .add(parts.railsR, { translateX: 170, translateY: 35, rotate: 28 }, 620)
-    .add(parts.ribs, { translateX: -100, translateY: 175, rotate: -16, opacity: .6 }, 690)
-    .add(parts.rear, { translateX: -235, translateY: 100, rotate: -24, scale: .94 }, 760)
-    .add(parts.blueprint, { opacity: [0, .9] }, 780)
-    .add(parts.dimensions, { opacity: [0, 1] }, 930)
-    .add('.label-one', { opacity: [0, 1], translateX: [30, 0] }, 900)
-    .add('.label-two', { opacity: [0, 1], translateX: [-30, 0] }, 1020)
-    .add('.label-three', { opacity: [0, 1], translateY: [24, 0] }, 1140);
+    const black = new THREE.MeshStandardMaterial({
+      color: 0x11100f,
+      metalness: 0.78,
+      roughness: 0.35
+    });
 
-  const total = timeline.duration;
-  const readout = $('.sequence-readout');
-  const progress = $('.machine-progress span');
-  let rafPending = false;
+    const parts = {};
 
-  const clamp = (v) => Math.max(0, Math.min(1, v));
-  const renderScrollState = () => {
-    const rect = sequence.getBoundingClientRect();
-    const scrollable = Math.max(1, sequence.offsetHeight - window.innerHeight);
-    const p = clamp(-rect.top / scrollable);
+    const makeGroup = name => {
+      const g = new THREE.Group();
+      g.name = name;
+      root.add(g);
+      parts[name] = g;
+      return g;
+    };
 
-    timeline.seek(total * p);
-    if (progress) progress.style.width = `${p * 100}%`;
-    if (readout) readout.textContent = p < .04
-      ? 'ASSEMBLED / 00%'
-      : p > .94 ? 'BLUEPRINT / 100%' : `DISASSEMBLY / ${String(Math.round(p * 100)).padStart(2, '0')}%`;
+    const cylinder = (
+      parent,
+      radius,
+      depth,
+      material,
+      x = 0,
+      y = 0,
+      z = 0,
+      segments = 96
+    ) => {
+      const m = new THREE.Mesh(
+        new THREE.CylinderGeometry(radius, radius, depth, segments),
+        material
+      );
 
-    const hud = $('.hud-right span:last-child');
-    if (hud) hud.textContent = p > .82 ? 'BLUEPRINT MODE ACTIVE' : p > .08 ? 'ASSEMBLY SEQUENCE' : 'SCROLL TO DISASSEMBLE ↓';
-    rafPending = false;
-  };
-  const requestRender = () => {
-    if (!rafPending) {
-      requestAnimationFrame(renderScrollState);
-      rafPending = true;
+      m.rotation.x = Math.PI / 2;
+      m.position.set(x, y, z);
+      parent.add(m);
+      return m;
+    };
+
+    const torus = (
+      parent,
+      radius,
+      tube,
+      material,
+      x = 0,
+      y = 0,
+      z = 0
+    ) => {
+      const m = new THREE.Mesh(
+        new THREE.TorusGeometry(radius, tube, 14, 128),
+        material
+      );
+
+      m.position.set(x, y, z);
+      parent.add(m);
+      return m;
+    };
+
+    const bolt = (
+      parent,
+      radius,
+      x,
+      y,
+      z,
+      material = edgeMetal
+    ) => {
+      const b = new THREE.Mesh(
+        new THREE.CylinderGeometry(radius, radius, 0.09, 12),
+        material
+      );
+
+      b.position.set(x, y, z);
+      b.rotation.x = Math.PI / 2;
+      parent.add(b);
+
+      const slot = new THREE.Mesh(
+        new THREE.BoxGeometry(radius * 1.2, 0.018, 0.018),
+        black
+      );
+
+      slot.position.set(x, y, z + 0.052);
+      parent.add(slot);
+    };
+
+    const ringBolts = (parent, radius, count = 12, z = 0) => {
+      for (let i = 0; i < count; i++) {
+        const a = i / count * Math.PI * 2;
+
+        bolt(
+          parent,
+          0.055,
+          Math.cos(a) * radius,
+          Math.sin(a) * radius,
+          z
+        );
+      }
+    };
+
+    // REAR HOUSING
+    const chassis = makeGroup('chassis');
+
+    cylinder(chassis, 2.0, 0.9, darkMetal, 0, 0, -1.25, 12);
+    torus(chassis, 1.92, 0.09, edgeMetal, 0, 0, -0.78);
+    torus(chassis, 1.72, 0.045, orange, 0, 0, -0.72);
+
+    for (let i = 0; i < 18; i++) {
+      const a = i / 18 * Math.PI * 2;
+
+      const fin = new THREE.Mesh(
+        new THREE.BoxGeometry(0.16, 0.78, 0.48),
+        metal
+      );
+
+      fin.position.set(
+        Math.cos(a) * 1.8,
+        Math.sin(a) * 1.8,
+        -1.2
+      );
+
+      fin.rotation.z = a;
+      chassis.add(fin);
     }
-  };
-  window.addEventListener('scroll', requestRender, { passive: true });
-  window.addEventListener('resize', requestRender);
-  renderScrollState();
 
-  // Cursor parallax adds a restrained camera-like response without hijacking scroll.
-  if (matchMedia('(pointer:fine)').matches) {
-    stage.addEventListener('pointermove', (event) => {
-      const rect = stage.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - .5;
-      const y = (event.clientY - rect.top) / rect.height - .5;
-      animate(svg, { rotateY: x * 5, rotateX: -y * 4, duration: 420, ease: 'outQuad' });
+    ringBolts(chassis, 1.88, 12, -0.68);
+
+    // REAR SIDE CLAMPS
+    const clamps = makeGroup('clamps');
+
+    for (let i = 0; i < 4; i++) {
+      const a = i * Math.PI / 2;
+
+      const c = new THREE.Mesh(
+        new THREE.BoxGeometry(0.38, 0.85, 0.32),
+        edgeMetal
+      );
+
+      c.position.set(
+        Math.cos(a) * 2.05,
+        Math.sin(a) * 2.05,
+        -0.9
+      );
+
+      c.rotation.z = a;
+      clamps.add(c);
+    }
+
+    // INTERNAL OPTICAL STACK
+    const core = makeGroup('core');
+
+    cylinder(core, 1.25, 0.55, black, 0, 0, -0.15);
+    torus(core, 1.15, 0.1, orange, 0, 0, 0.16);
+    torus(core, 0.92, 0.065, edgeMetal, 0, 0, 0.22);
+    cylinder(core, 0.78, 0.25, darkMetal, 0, 0, 0.28);
+
+    const glowDisc = new THREE.Mesh(
+      new THREE.CircleGeometry(0.56, 80),
+      new THREE.MeshBasicMaterial({
+        color: 0xff7a32,
+        transparent: true,
+        opacity: 0.19
+      })
+    );
+
+    glowDisc.position.z = 0.43;
+    core.add(glowDisc);
+
+    const emitter = new THREE.Mesh(
+      new THREE.SphereGeometry(0.25, 32, 24),
+      new THREE.MeshStandardMaterial({
+        color: 0xffb47f,
+        emissive: 0xff5a16,
+        emissiveIntensity: 2.8,
+        metalness: 0.25,
+        roughness: 0.2
+      })
+    );
+
+    emitter.position.z = 0.5;
+    core.add(emitter);
+
+    // IRIS BLADES
+    const iris = makeGroup('iris');
+
+    torus(iris, 0.92, 0.07, orange, 0, 0, 0.52);
+
+    for (let i = 0; i < 8; i++) {
+      const blade = new THREE.Mesh(
+        new THREE.ConeGeometry(0.38, 0.88, 4),
+        metal
+      );
+
+      blade.position.set(
+        Math.cos(i * Math.PI / 4) * 0.45,
+        Math.sin(i * Math.PI / 4) * 0.45,
+        0.55
+      );
+
+      blade.rotation.z = i * Math.PI / 4;
+      blade.rotation.x = Math.PI / 2;
+      iris.add(blade);
+    }
+
+    // FRONT ROTATING RING
+    const front = makeGroup('front');
+
+    torus(front, 1.55, 0.16, metal, 0, 0, 1.0);
+    torus(front, 1.72, 0.035, edgeMetal, 0, 0, 1.0);
+    torus(front, 1.43, 0.035, orange, 0, 0, 1.0);
+
+    ringBolts(front, 1.55, 16, 1.05);
+
+    // OUTER RETAINING RING
+    const retainer = makeGroup('retainer');
+
+    torus(retainer, 2.05, 0.075, edgeMetal, 0, 0, 1.65);
+    torus(retainer, 2.13, 0.018, orange, 0, 0, 1.65);
+
+    ringBolts(retainer, 2.05, 16, 1.7);
+
+    // RADIAL RAILS
+    const rails = makeGroup('rails');
+
+    for (let i = 0; i < 4; i++) {
+      const a = i * Math.PI / 2;
+
+      const rail = new THREE.Mesh(
+        new THREE.BoxGeometry(0.13, 0.7, 1.15),
+        metal
+      );
+
+      rail.position.set(
+        Math.cos(a) * 1.98,
+        Math.sin(a) * 1.98,
+        0.15
+      );
+
+      rail.rotation.z = a;
+      rails.add(rail);
+    }
+
+    // DETACHED END CAPS
+    const caps = makeGroup('caps');
+
+    for (let i = 0; i < 8; i++) {
+      const a = i * Math.PI / 4;
+
+      const cap = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.12, 0.12, 0.12, 12),
+        orange
+      );
+
+      cap.rotation.x = Math.PI / 2;
+
+      cap.position.set(
+        Math.cos(a) * 2.25,
+        Math.sin(a) * 2.25,
+        1.95
+      );
+
+      caps.add(cap);
+    }
+
+    // BLUEPRINT ORBIT RINGS
+    const blueprint = makeGroup('blueprint');
+
+    const guideMat = new THREE.MeshBasicMaterial({
+      color: 0xd96b32,
+      transparent: true,
+      opacity: 0.36
     });
-    stage.addEventListener('pointerleave', () => {
-      animate(svg, { rotateX: 0, rotateY: 0, duration: 700, ease: 'outExpo' });
+
+    torus(blueprint, 2.55, 0.008, guideMat, 0, 0, -0.3);
+    torus(blueprint, 2.35, 0.006, guideMat, 0, 0, 1.9);
+
+    root.scale.setScalar(0.92);
+    root.rotation.x = -0.12;
+    root.rotation.y = -0.24;
+
+    if (fallback) fallback.style.display = 'none';
+
+    // RESPONSIVE CAMERA
+    const fit = () => {
+      const w = stage.clientWidth;
+      const h = stage.clientHeight;
+
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.position.z = window.innerWidth < 800 ? 14.8 : 12.8;
+      camera.updateProjectionMatrix();
+    };
+
+    resizeObserver = new ResizeObserver(fit);
+    resizeObserver.observe(stage);
+    fit();
+
+    // IDLE MACHINE MOTION
+    const clock = new THREE.Clock();
+
+    const render = () => {
+      requestAnimationFrame(render);
+
+      const t = clock.getElapsedTime();
+
+      if (!reduceMotion) {
+        core.rotation.z = Math.sin(t * 0.55) * 0.025;
+        iris.rotation.z = t * 0.18;
+        front.rotation.z = -t * 0.07;
+        blueprint.rotation.z = t * 0.025;
+        emitter.scale.setScalar(1 + Math.sin(t * 2.1) * 0.055);
+      }
+
+      renderer.render(scene, camera);
+    };
+
+    render();
+
+    // ANIME.JS SCROLL TIMELINE
+    // Scrolling down separates the parts.
+    // Scrolling up reverses the animation and reassembles them.
+
+    const timeline = createTimeline({
+      autoplay: onScroll({
+        target: $('#of01-sequence'),
+        enter: 'top top',
+        leave: 'bottom bottom',
+        sync: true,
+
+        onUpdate: self => {
+          const p = self.progress;
+
+          $('#machine-progress-fill').style.width = `${p * 100}%`;
+
+          $('#sequence-readout').textContent =
+            `${p > 0.96 ? 'BLUEPRINT' : p < 0.03 ? 'ASSEMBLED' : 'DISASSEMBLY'} — ${String(Math.round(p * 100)).padStart(2, '0')}%`;
+
+          $('#system-state').textContent =
+            p > 0.9 ? 'BLUEPRINT' : p > 0.04 ? 'SEPARATING' : 'ASSEMBLED';
+
+          $('#scroll-instruction').textContent =
+            p > 0.94 ? 'SCROLL UP TO REASSEMBLE ↑' : 'SCROLL TO DISASSEMBLE ↓';
+        }
+      }),
+
+      defaults: {
+        duration: 1000,
+        ease: 'inOutCubic'
+      }
     });
+
+    // THREE.JS TRANSFORM PROXIES
+    const motion = {
+      chassis: { x:0, y:0, z:0, rz:0 },
+      clamps: { x:0, y:0, z:0, rz:0 },
+      core: { x:0, y:0, z:0, rz:0 },
+      iris: { x:0, y:0, z:0, rz:0 },
+      front: { x:0, y:0, z:0, rz:0 },
+      retainer: { x:0, y:0, z:0, rz:0 },
+      rails: { x:0, y:0, z:0, rz:0 },
+      caps: { x:0, y:0, z:0, rz:0 },
+      blueprint: { opacity:0 }
+    };
+
+    const apply = () => {
+      for (const [name, v] of Object.entries(motion)) {
+        const g = parts[name];
+
+        if (!g) continue;
+
+        if ('x' in v) {
+          g.position.set(v.x, v.y, v.z);
+        }
+
+        if ('rz' in v) {
+          g.rotation.z = v.rz;
+        }
+
+        if (name === 'blueprint') {
+          g.visible = v.opacity > 0.02;
+        }
+      }
+    };
+
+    const add = (name, to, at) => {
+      timeline.add(
+        motion[name],
+        { ...to, onUpdate: apply },
+        at
+      );
+    };
+
+    // EXPLODED VIEW SEQUENCE
+    add('caps', {
+      x:2.2, y:1.2, z:1.2, rz:0.6
+    }, 0);
+
+    add('retainer', {
+      x:2.6, y:0.25, z:1.0, rz:-0.28
+    }, 150);
+
+    add('front', {
+      x:1.55, y:-0.15, z:0.55, rz:0.32
+    }, 300);
+
+    add('iris', {
+      x:-1.35, y:0.4, z:0.2, rz:-0.48
+    }, 450);
+
+    add('core', {
+      x:0, y:-1.15, z:0.2, rz:0.22
+    }, 600);
+
+    add('clamps', {
+      x:-2.0, y:0.65, z:-0.2, rz:-0.25
+    }, 760);
+
+    add('rails', {
+      x:0, y:1.65, z:0.5, rz:0.12
+    }, 900);
+
+    add('chassis', {
+      x:-1.4, y:-0.35, z:-0.5, rz:-0.12
+    }, 1040);
+
+    add('blueprint', {
+      opacity:1
+    }, 1200);
+
+    // POINTER PARALLAX
+    if (matchMedia('(pointer:fine)').matches && !reduceMotion) {
+      stage.addEventListener('pointermove', e => {
+        const r = stage.getBoundingClientRect();
+
+        const nx = (e.clientX - r.left) / r.width - 0.5;
+        const ny = (e.clientY - r.top) / r.height - 0.5;
+
+        animate(root.rotation, {
+          x: -0.12 - ny * 0.12,
+          y: -0.24 + nx * 0.18,
+          duration: 450,
+          ease: 'outQuad'
+        });
+      });
+
+      stage.addEventListener('pointerleave', () => {
+        animate(root.rotation, {
+          x: -0.12,
+          y: -0.24,
+          duration: 700,
+          ease: 'outExpo'
+        });
+      });
+    }
+
+  } catch (err) {
+    console.error('[OUTFRAME] 3D engine unavailable:', err);
+
+    if (fallback) {
+      fallback.textContent =
+        '3D VIEW UNAVAILABLE — THE STUDIO REMAINS FULLY ACCESSIBLE';
+    }
   }
+}
 
-  // Reveal the rest of the original website while preserving its content and layout.
-  const revealTargets = $$('.manifesto-grid, .section-heading, .capability, .work-card, .process-steps article, .contact-main');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+// SECTION REVEALS AND PROJECT HOVER
+if (!reduceMotion) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      animate(entry.target, { opacity: [0, 1], translateY: [24, 0], duration: 760, ease: 'outExpo' });
+
+      animate(entry.target, {
+        opacity: [0, 1],
+        translateY: [24, 0],
+        duration: 760,
+        ease: 'outExpo'
+      });
+
       observer.unobserve(entry.target);
     });
-  }, { threshold: .12 });
-  revealTargets.forEach((el) => {
-    el.style.opacity = '0';
-    observer.observe(el);
-  });
+  }, { threshold: 0.12 });
 
-  $$('.work-card').forEach((card) => {
+  $$('.manifesto-grid,.section-heading,.capability,.work-card,.process-steps article,.contact-main')
+    .forEach(el => observer.observe(el));
+
+  $$('.work-card').forEach(card => {
     const art = $('.work-art', card);
-    if (!art) return;
-    card.addEventListener('mouseenter', () => animate(art, { scale: 1.025, duration: 420, ease: 'outExpo' }));
-    card.addEventListener('mouseleave', () => animate(art, { scale: 1, duration: 420, ease: 'outExpo' }));
-  });
 
-  // Existing mobile menu remains as authored in the repository.
-  const toggle = $('.menu-toggle');
-  const nav = $('.desktop-nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
+    card.addEventListener('mouseenter', () => {
+      animate(art, {
+        scale: 1.025,
+        duration: 420,
+        ease: 'outExpo'
+      });
     });
-    $$('a', nav).forEach((link) => link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }));
-  }
+
+    card.addEventListener('mouseleave', () => {
+      animate(art, {
+        scale: 1,
+        duration: 420,
+        ease: 'outExpo'
+      });
+    });
+  });
 }

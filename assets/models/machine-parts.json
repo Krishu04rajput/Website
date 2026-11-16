@@ -1,0 +1,3630 @@
+{
+  "asset": "OUTFRAME-M01",
+  "version": "0.1.0",
+  "units": "model units (approximate)",
+  "axis": "X (front negative, rear positive)",
+  "description": "Original procedural mechanical reconstruction inspired by the user's Anime.js reference screenshots; not the original Anime.js website asset.",
+  "groups": [
+    {
+      "name": "front",
+      "explode": [
+        -1.25,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "core",
+      "explode": [
+        -0.15,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing",
+      "explode": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gears",
+      "explode": [
+        0.65,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "threads",
+      "explode": [
+        1.15,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear",
+      "explode": [
+        1.85,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "fasteners",
+      "explode": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "name": "internal",
+      "explode": [
+        -0.25,
+        0,
+        0
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "name": "front_bezel_outer",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_bezel_inner_lip",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_aperture_retainer",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_glass_mount",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_optical_element",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurled_ring",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_01",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_02",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_03",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_04",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_05",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_06",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_07",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_08",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_09",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_10",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_11",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_12",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_13",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_14",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_15",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_16",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_17",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_18",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_19",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_20",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_21",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_22",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_23",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_24",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_25",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_26",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_27",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_28",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_29",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_30",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_31",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_32",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_33",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_34",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_35",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_36",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_37",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_38",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_39",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_40",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_41",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_42",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_43",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_44",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_45",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_46",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_47",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_48",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_49",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_50",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_51",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_52",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_53",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_54",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_55",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_56",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_57",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_58",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_59",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_60",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_61",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_62",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_63",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_knurl_64",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_collar_A",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_collar_B",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_collar_C",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_main",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_front_lip",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_rear_lip",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_spacer_01",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_spacer_02",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_spacer_03",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_spacer_04",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_spacer_05",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_spacer_06",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_spacer_07",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "inner_barrel_spacer_08",
+      "group": "core",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "central_housing_shell",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "central_housing_front_rim",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "central_housing_rear_rim",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "central_housing_mid_band",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_01",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_01",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_02",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_02",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_03",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_03",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_04",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_04",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_05",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_05",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_06",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_06",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_07",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_07",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_08",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_08",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_09",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_09",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_10",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_10",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_11",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_11",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_panel_12",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_boss_12",
+      "group": "housing",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_core_ring_1",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_core_ring_2",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_core_ring_3",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_01",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_02",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_03",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_04",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_05",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_06",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_07",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_08",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_09",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_10",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_11",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_12",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_13",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_14",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_15",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_16",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_17",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_18",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_19",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_20",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_21",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_22",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_23",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_24",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_25",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_26",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_27",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_28",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_29",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_30",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_31",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_32",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_33",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_34",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_35",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_36",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_37",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_38",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_39",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_40",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_41",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_42",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_43",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_44",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_45",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_46",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_47",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_primary_tooth_48",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_01",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_02",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_03",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_04",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_05",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_06",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_07",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_08",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_09",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_10",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_11",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_12",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_13",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_14",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_15",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_16",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_17",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_18",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_19",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_20",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_21",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_22",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_23",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_24",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_25",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_26",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_27",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_28",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_29",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_30",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_31",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_32",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_33",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_34",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_35",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_36",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_37",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_38",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_39",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "gear_secondary_tooth_40",
+      "group": "gears",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "threaded_barrel_base",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "threaded_barrel_body",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "external_helical_thread",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "thread_guard_ring_01",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "thread_guard_ring_02",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "thread_guard_ring_03",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "thread_guard_ring_04",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "thread_guard_ring_05",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "thread_guard_ring_06",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "thread_guard_ring_07",
+      "group": "threads",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_base",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_01",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_02",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_03",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_04",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_05",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_06",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_07",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_08",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_09",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_10",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_11",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_grip_lug_12",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_outer",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_inner",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_mount_core",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_mount_lip",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_terminal_ring",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_mount_block_01",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_mount_block_02",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_mount_block_03",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_mount_block_04",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_mount_block_05",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_mount_block_06",
+      "group": "rear",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_01_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_01_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_01_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_02_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_02_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_02_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_03_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_03_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_03_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_04_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_04_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_04_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_05_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_05_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_05_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_06_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_06_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_06_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_07_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_07_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_07_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_08_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_08_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_08_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_09_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_09_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_09_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_10_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_10_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_10_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_11_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_11_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_11_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_12_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_12_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_flange_bolt_12_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_01_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_01_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_01_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_02_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_02_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_02_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_03_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_03_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_03_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_04_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_04_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_04_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_05_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_05_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_05_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_06_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_06_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_06_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_07_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_07_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_07_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_08_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_08_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_08_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_09_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_09_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_09_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_10_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_10_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "housing_bolt_10_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_01_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_01_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_01_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_02_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_02_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_02_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_03_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_03_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_03_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_04_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_04_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_04_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_05_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_05_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_05_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_06_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_06_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_06_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_07_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_07_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_07_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_08_shank",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_08_head",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "rear_flange_bolt_08_slot",
+      "group": "fasteners",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_01",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_02",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_03",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_04",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_05",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_06",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_07",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_08",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_09",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_10",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_11",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_12",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_13",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_14",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_15",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_16",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_17",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_18",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_19",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_20",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_21",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_22",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_23",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_24",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_25",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_26",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_27",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_28",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_29",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_30",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_31",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_32",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_33",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_34",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_35",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_36",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_37",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_38",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_39",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_40",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_41",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_42",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_43",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_44",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_45",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_46",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_47",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_48",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_49",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_50",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_51",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_52",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_53",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_54",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_55",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_56",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_57",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_58",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_59",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "front_index_mark_60",
+      "group": "front",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "internal_spacer_fin_01",
+      "group": "internal",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "internal_spacer_fin_02",
+      "group": "internal",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "internal_spacer_fin_03",
+      "group": "internal",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "internal_spacer_fin_04",
+      "group": "internal",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "internal_spacer_fin_05",
+      "group": "internal",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "internal_spacer_fin_06",
+      "group": "internal",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "internal_spacer_fin_07",
+      "group": "internal",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "internal_spacer_fin_08",
+      "group": "internal",
+      "explode_axis": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
